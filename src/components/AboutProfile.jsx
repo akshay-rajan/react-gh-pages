@@ -1,7 +1,7 @@
 import React from "react";
+import { useState } from "react";
 import dp from "../assets/dp_cartoon.jpeg";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import link from "../assets/link.png";
 
 export default function AboutProfile() {
   const flexLeft = {
@@ -77,11 +77,19 @@ export default function AboutProfile() {
       marginTop: '1rem',
     },
     url: {
-      color: 'white',
+      color: 'wheat',
       textDecoration: 'none',
       fontSize: '14px',
     },
+    urlHover: {
+      color: 'wheat',
+      textDecoration: 'underline',
+      fontSize: '14px',
+    },
   }
+
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <>
       <div style={flexLeft.container}>
@@ -100,7 +108,14 @@ export default function AboutProfile() {
             </a>
           </div>
           <div style={flexLeft.extras}>
-            <a href="https://akshay-rajan.github.io/" style={flexLeft.url}>akshay-rajan.github.io/</a>
+            <a 
+              href="https://akshay-rajan.github.io/" 
+              style={isHovered ? flexLeft.urlHover : flexLeft.url} 
+              onMouseEnter={() => setIsHovered(true)} 
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              akshay-rajan.github.io/
+            </a>
           </div>
         </div>
       </div>
