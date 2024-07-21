@@ -5,7 +5,15 @@ export default function AboutDetails() {
     container: {
       flex: 2,
       padding: '1rem',
-    }
+      display: 'block',
+      backgroundColor: 'black',
+      padding: '1rem',
+      maxWidth: '100%',
+      height: 'auto',
+      aspectRatio: 'attr(width) / attr(height)',
+      background: '#000',
+      borderRadius: '0 1.5rem 1.5rem 0',
+    },
   }
   return (
     <>

@@ -22,14 +22,6 @@ export default function About() {
       boxShadow: '0 0.1rem 0 #cfcfcf',
       border: '1px solid wheat',
     },
-    imgStyle: {
-      display: 'block',
-      maxWidth: '100%',
-      height: 'auto',
-      aspectRatio: 'attr(width) / attr(height)',
-      background: '#000',
-      borderRadius: '1.5rem',
-    },
     laptopShadowStyle: {
       position: 'absolute',
       right: '-10%',
