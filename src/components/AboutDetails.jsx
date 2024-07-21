@@ -7,7 +7,6 @@ export default function AboutDetails() {
       padding: '1rem',
       display: 'block',
       backgroundColor: 'black',
-      padding: '1rem',
       maxWidth: '100%',
       height: 'auto',
       aspectRatio: 'attr(width) / attr(height)',
