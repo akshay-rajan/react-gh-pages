@@ -6,7 +6,7 @@ export default function AboutCards() {
 
   const education = {
     title: "Education",
-    description: "This is the description for education",
+    description: "Colleges, Schools, and Degrees",
     points: ["College of Engineering, Trivandrum", "University College, TVM", "St. Joseph's HSS..."],
     content: [
       {
@@ -32,7 +32,7 @@ export default function AboutCards() {
 
   const skills = {
     title: "Skills",
-    description: "This is the description for skills",
+    description: "Product of consistent learning and practice",
     points: ["Django", "React", "Python", "Java", "C..."],
     content: [
       {
@@ -102,7 +102,7 @@ export default function AboutCards() {
 
   const certifications = {
     title: "Certifications",
-    description: "This is the description for certifications",
+    description: "Proofs of sacrifices and dedication",
     points: ["Harvard", "Google", "IIT Madras", "ACM..."],
     content: [
       {
@@ -125,7 +125,7 @@ export default function AboutCards() {
 
   const achievements = {
     title: "Achievements",
-    description: "This is the description for achievements",
+    description: "Seeds of motivation and inspiration",
     points: ["College Topper", "IIT JAM", "Kerala MCA Entrance..."],
     content: [
       {
