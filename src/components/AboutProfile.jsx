@@ -7,7 +7,7 @@ export default function AboutProfile() {
   const flexLeft = {
     container: {
       display: 'block',
-      padding: '3rem',
+      padding: '2rem',
       flex: 1,
       backgroundColor: 'black',
       maxWidth: '100%',
@@ -18,17 +18,18 @@ export default function AboutProfile() {
     },
     imgContainer: {
       textAlign: 'left',
-      maxWidth: '100%',
       height: 'auto',
       aspectRatio: 'attr(width) / attr(height)',
       background: '#000',
       borderRadius: '50%',
     },
     dp: {
-      textAlign: 'left',
+      textAlign: 'center',
       borderRadius: '50%',
       border: '1px solid wheat',
-      width: '70%',
+      width: '300px',
+      margin: '0',
+      padding: '0',
       height: 'auto',
     },
     details: {
@@ -63,7 +64,7 @@ export default function AboutProfile() {
       height: 'auto',
     },
     mainButton: {
-      width: '80%',
+      width: '100%',
       fontSize: '15px',
       color: '#b1aeae',
       fontWeight: 'normal',

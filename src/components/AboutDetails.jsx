@@ -1,9 +1,12 @@
 import react from "react";
 
+import AboutMe from "./AboutMe";
+
+
 export default function AboutDetails() {
   const flexRight = {
     container: {
-      flex: 2,
+      flex: 4,
       padding: '1rem',
       display: 'block',
       backgroundColor: 'black',
@@ -17,7 +20,7 @@ export default function AboutDetails() {
   return (
     <>
       <div style={flexRight.container}>
-        <div>about me</div>
+        <AboutMe />
         <div>cards of info</div>
       </div>
     </>
