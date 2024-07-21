@@ -1,17 +1,17 @@
 import React from "react";
 
-export default function Education() {
+export default function Certifications() {
   const container = {
     font: `monospace`,
     display: 'block',
     borderRadius: '10px',
-    position: 'relative',
+    position: 'relative', 
   };
   
   return (
     <>
       <div style={container}>
-        Education
+        Certifications
       </div>
     </>
   );

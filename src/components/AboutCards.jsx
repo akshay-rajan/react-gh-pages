@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 import AboutCard from "./AboutCard";
+import Education from "./Education";
+import Skills from "./Skills";
+import Achievements from "./Achievements";
+import Certifications from "./Certifications";
 
-export default function AboutCards() {
+
+export default function AboutCards({ isExpanded, setExpanded }) {
 
   const education = {
     title: "Education",
@@ -32,7 +37,7 @@ export default function AboutCards() {
 
   const skills = {
     title: "Skills",
-    description: "Product of consistent learning and practice",
+    description: "Products of consistent learning and practice",
     points: ["Django", "React", "Python", "Java", "C..."],
     content: [
       {
@@ -145,14 +150,37 @@ export default function AboutCards() {
       },
     ],
   };
+  
+  const expanded = {
+    display: 'block',
+    position: 'relative',
+    backgroundColor: 'black',
+    height: '100%',
+    width: '100%',
+    borderRadius: '20px',
+  }
+
+  const [hovering, setHovering] = useState("none");
 
   return (
     <>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridGap: '20px' }}>
-        <AboutCard {...education} />
-        <AboutCard {...skills} />
-        <AboutCard {...certifications} />
-        <AboutCard {...achievements} />
+
+        <div 
+          style={isExpanded ? expanded : {display: 'none'}} 
+          onMouseLeave={() => props.setExpanded(false)
+        }>
+          {hovering == "Education" && <Education />}
+          {hovering == "Skills" && <Skills />}
+          {hovering == "Achievements" && <Achievements />}
+          {hovering == "Certifications" && <Certifications />}
+        </div>
+
+        <AboutCard {...education} isExpanded={isExpanded} setExpanded={setExpanded} setHovering={setHovering} />
+        <AboutCard {...skills}  isExpanded={isExpanded} setExpanded={setExpanded} setHovering={setHovering} />
+        <AboutCard {...certifications} isExpanded={isExpanded} setExpanded={setExpanded} setHovering={setHovering} />
+        <AboutCard {...achievements} isExpanded={isExpanded} setExpanded={setExpanded} setHovering={setHovering} />
+
       </div>
     </>
   );

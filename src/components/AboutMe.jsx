@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function AboutMe() {
+export default function AboutMe({ isExpanded }) {
   const content = {
     container: {
       font: `monospace`,
@@ -28,7 +28,7 @@ export default function AboutMe() {
 
   return (
     <>
-      <div style={content.container}>
+      <div style={isExpanded ? {display: "none"} : content.container}>
         <div style={content.heading}>
           About Me
         </div>

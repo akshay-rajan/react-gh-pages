@@ -1,7 +1,5 @@
 import React from "react";
 
-import Education from "./Education";
-
 
 export default function AboutCard(props) {
   const container = {
@@ -50,14 +48,15 @@ export default function AboutCard(props) {
     opacity: '0.8',
   }
 
-  const [expanded, setExpanded] = React.useState(false);
-
   return (
     <>
-      <div style={expanded ? container : {display: 'none'}} onMouseLeave={() => setExpanded(false)}>
-        <Education />
-      </div>
-      <div style={expanded ? {display: 'none'} : container} onMouseEnter={() => setExpanded(true)}>
+      <div 
+        style={props.isExpanded ? {display: 'none'} : container} 
+        onMouseEnter={() => {
+          props.setExpanded(true);
+          props.setHovering(props.title);
+        }
+      }>
         <div style={title}>{props.title}</div>
         <div style={desc}>
           {props.description}

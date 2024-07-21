@@ -14,7 +14,7 @@ export default function About() {
       position: 'relative',
       zIndex: 1,
       padding: '10px',
-      height: '90vh',
+      minHeight: '90vh',
       width: '90vw',
       borderRadius: '2rem',
       background: '#ecf1f7',
