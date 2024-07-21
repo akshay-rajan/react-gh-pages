@@ -30,6 +30,21 @@ export default function AboutCard(props) {
     fontSize: '15px',
     marginTop: '5px',
     opacity: '0.8',
+  };
+  const points = {
+    font: `monospace`,
+    color: 'white',
+    fontSize: '15px',
+    marginTop: '5px',
+    opacity: '0.8',
+  };
+  const item = {
+    display: 'inline',
+    font: `monospace`,
+    color: 'white',
+    fontSize: '15px',
+    marginTop: '5px',
+    opacity: '0.8',
   }
 
   return (
@@ -38,6 +53,11 @@ export default function AboutCard(props) {
         <div style={title}>{props.title}</div>
         <div style={desc}>
           {props.description}
+        </div>
+        <div style={points}>
+          {props.points.map((point) => (
+            <li style={item}>⚫ {point} </li>
+          ))}
         </div>
       </div>
     </>

@@ -7,6 +7,7 @@ export default function AboutCards() {
   const education = {
     title: "Education",
     description: "This is the description for education",
+    points: ["College of Engineering, Trivandrum", "University College, TVM", "St. Joseph's HSS..."],
     content: [
       {
         "degree": "Masters in Computer Applications",
@@ -32,6 +33,7 @@ export default function AboutCards() {
   const skills = {
     title: "Skills",
     description: "This is the description for skills",
+    points: ["Django", "React", "Python", "Java", "C..."],
     content: [
       {
         "skill": "Django",
@@ -87,6 +89,7 @@ export default function AboutCards() {
   // const experience = {
   //   title: "Experience",
   //   description: "This is the description for experience",
+  //   points: ["Solana", "Internet Computer", "Rust", "TypeScript..."],
   //   content: [
   //     {
   //       "job": "Software Developer Intern",
@@ -100,6 +103,7 @@ export default function AboutCards() {
   const certifications = {
     title: "Certifications",
     description: "This is the description for certifications",
+    points: ["Harvard", "Google", "IIT Madras", "ACM..."],
     content: [
       {
         "certification": "Full Stack Web Development",
@@ -122,6 +126,7 @@ export default function AboutCards() {
   const achievements = {
     title: "Achievements",
     description: "This is the description for achievements",
+    points: ["College Topper", "IIT JAM", "Kerala MCA Entrance..."],
     content: [
       {
         "achievement": "College Topper",
