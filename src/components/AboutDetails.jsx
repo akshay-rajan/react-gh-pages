@@ -1,6 +1,7 @@
 import react from "react";
 
 import AboutMe from "./AboutMe";
+import AboutCards from "./AboutCards";
 
 
 export default function AboutDetails() {
@@ -17,11 +18,12 @@ export default function AboutDetails() {
       borderRadius: '0 1.5rem 1.5rem 0',
     },
   }
+  
   return (
     <>
       <div style={flexRight.container}>
         <AboutMe />
-        <div>cards of info</div>
+        <AboutCards />
       </div>
     </>
   );
