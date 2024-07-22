@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import dp from "../assets/dp_cartoon.jpeg";
-import link from "../assets/link.png";
+import { Tooltip } from "@nextui-org/tooltip";
+
 
 export default function AboutProfile() {
   const flexLeft = {
@@ -95,7 +96,9 @@ export default function AboutProfile() {
     <>
       <div style={flexLeft.container}>
         <div style={flexLeft.imgContainer}>
-          <img src={dp} style={flexLeft.dp} alt="display picture" />
+          <Tooltip content="👽️" showArrow={true} placement="right-end" color="foreground" offset={-100} >
+            <img src={dp} style={flexLeft.dp} alt="display picture" />
+          </Tooltip>
         </div>
         <div style={flexLeft.details}>
           <div style={flexLeft.name}>Akshay R</div>
