@@ -23,6 +23,14 @@ export default function EduBlock({ content, setCurrentEdu, index }) {
     margin: '10px',
     marginLeft: '0',
   }
+  const degree = {
+    fontWeight: 'bold',
+    fontSize: '15px',
+  };
+  const marks = {
+    color: 'wheat',
+    fontSize: '13px',
+  };
   
   const handleMouseEnter = () => setCurrentEdu(index.index);
   const handleMouseLeave = () => setCurrentEdu(-1);
@@ -34,12 +42,14 @@ export default function EduBlock({ content, setCurrentEdu, index }) {
         {content.ongoing ? <img style={icon} src={loading} alt="Loading" />: <img style={icon} src={done} alt="Loading" />}
 
         <div>
-          <div>
+          <div style={degree}>
             {content.degree} 
           </div>
           <div>
-            {content.school} <br />
-            ({content.year}) 
+            {content.school}
+          </div>
+          <div style={{fontSize: "14px"}}>({content.year})</div>
+          <div style={marks}>
             {content.marks} <br />
           </div>
         </div>
