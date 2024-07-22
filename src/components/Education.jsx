@@ -50,7 +50,6 @@ export default function Education(props) {
 
   const [currentEdu, setCurrentEdu] = useState(-1);
 
-  
   return (
     <>
       <div style={container}>

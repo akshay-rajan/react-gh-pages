@@ -24,9 +24,12 @@ export default function EduBlock({ content, setCurrentEdu, index }) {
     marginLeft: '0',
   }
   
+  const handleMouseEnter = () => setCurrentEdu(index.index);
+  const handleMouseLeave = () => setCurrentEdu(-1);
+
   return (
     <>
-      <div style={container} onMouseEnter={() => setCurrentEdu(index.index)} onMouseLeave={setCurrentEdu(-1)}>
+      <div style={container} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         
         {content.ongoing ? <img style={icon} src={loading} alt="Loading" />: <img style={icon} src={done} alt="Loading" />}
 
