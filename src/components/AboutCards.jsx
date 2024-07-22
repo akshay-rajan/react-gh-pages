@@ -15,18 +15,21 @@ export default function AboutCards({ isExpanded, setExpanded }) {
     points: ["College of Engineering, Trivandrum", "University College, TVM", "St. Joseph's HSS..."],
     content: [
       {
+        "ongoing": true,
         "degree": "Masters in Computer Applications",
         "school": "College of Engineering, Trivandrum",
         "year": "2023 - Present",
         "marks": "CGPA: 9.36",
       },
       {
+        "ongoing": false,
         "degree": "Bachelor of Science in Mathematics",
         "school": "University College, Trivandrum",
         "year": "2020 - 2023",
         "marks": "CGPA: 9.63 (Core) {College Topper}",
       },
       {
+        "ongoing": false,
         "degree": "Higher Secondary",
         "school": "St. Joseph's Higher Secondary School",
         "year": "2018 - 2020",
@@ -164,17 +167,17 @@ export default function AboutCards({ isExpanded, setExpanded }) {
 
   return (
     <>
+      <div 
+        style={isExpanded ? expanded : {display: 'none'}} 
+        onMouseLeave={() => setExpanded(false)
+      }>
+        {hovering == "Education" && <Education {...education} />}
+        {hovering == "Skills" && <Skills />}
+        {hovering == "Achievements" && <Achievements />}
+        {hovering == "Certifications" && <Certifications />}
+      </div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridGap: '20px' }}>
 
-        <div 
-          style={isExpanded ? expanded : {display: 'none'}} 
-          onMouseLeave={() => props.setExpanded(false)
-        }>
-          {hovering == "Education" && <Education />}
-          {hovering == "Skills" && <Skills />}
-          {hovering == "Achievements" && <Achievements />}
-          {hovering == "Certifications" && <Certifications />}
-        </div>
 
         <AboutCard {...education} isExpanded={isExpanded} setExpanded={setExpanded} setHovering={setHovering} />
         <AboutCard {...skills}  isExpanded={isExpanded} setExpanded={setExpanded} setHovering={setHovering} />
