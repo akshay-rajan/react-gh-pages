@@ -26,7 +26,7 @@ export default function AboutCards({ isExpanded, setExpanded }) {
         "degree": "Bachelor of Science in Mathematics",
         "school": "University College, Trivandrum",
         "year": "2020 - 2023",
-        "marks": "CGPA: 9.63 (Core) {College Topper}",
+        "marks": "CGPA: 9.63 (Core)",
       },
       {
         "ongoing": false,

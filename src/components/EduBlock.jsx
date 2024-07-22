@@ -3,7 +3,7 @@ import React from "react";
 import loading from "../assets/github-loading.gif";
 import done from "../assets/green-checkmark.png";
 
-export default function EduBlock({ content }) {
+export default function EduBlock({ content, setCurrentEdu, index }) {
 
   const container = {
     display: 'flex',
@@ -26,7 +26,7 @@ export default function EduBlock({ content }) {
   
   return (
     <>
-      <div style={container}>
+      <div style={container} onMouseEnter={() => setCurrentEdu(index.index)} onMouseLeave={setCurrentEdu(-1)}>
         
         {content.ongoing ? <img style={icon} src={loading} alt="Loading" />: <img style={icon} src={done} alt="Loading" />}
 
