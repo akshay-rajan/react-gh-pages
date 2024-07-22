@@ -14,7 +14,8 @@ export default function EduBlock({ content }) {
     borderRadius: '10px',
     backgroundColor: 'black',
     padding: '1rem',
-    margin: '0.5rem',
+    margin: '0',
+    height: '100px',
   };
   const icon = {
     width: '15px',
