@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CloseIcon from '@mui/icons-material/Close';
 
 import EduBlock from "./EduBlock";
 
@@ -12,6 +13,7 @@ export default function Education(props) {
     padding: '10px',
   };
   const title = {
+    display: 'flex',
     font: `monospace`,
     color: 'white',
     fontSize: '30px',
@@ -35,16 +37,26 @@ export default function Education(props) {
     textAlign: 'right',
     float: 'right',
     marginRight: '0',
-
-  }
-
+  };
+  const closeButton = {
+    position: 'absolute',
+    top: '20',
+    left: '90%',
+    color: 'white',
+    cursor: 'pointer',
+  };
 
   
   return (
     <>
       <div style={container}>
-        <div style={title}>
-          Education
+        <div style={title} onMouseEnter={() => props.setExpanded(false)}>
+          <div>
+            Education 
+          </div>
+          <div style={closeButton}>
+            <CloseIcon />
+          </div>
         </div>
         <div style={eduData}>
           <EduBlock content={props.content[0]} />

@@ -171,7 +171,7 @@ export default function AboutCards({ isExpanded, setExpanded }) {
         style={isExpanded ? expanded : {display: 'none'}} 
         onMouseLeave={() => setExpanded(false)
       }>
-        {hovering == "Education" && <Education {...education} />}
+        {hovering == "Education" && <Education {...education} setExpanded={setExpanded} />}
         {hovering == "Skills" && <Skills />}
         {hovering == "Achievements" && <Achievements />}
         {hovering == "Certifications" && <Certifications />}
