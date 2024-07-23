@@ -172,9 +172,9 @@ export default function AboutCards({ isExpanded, setExpanded }) {
         onMouseLeave={() => setExpanded(false)
       }>
         {hovering == "Education" && <Education {...education} setExpanded={setExpanded} />}
-        {hovering == "Skills" && <Skills />}
-        {hovering == "Achievements" && <Achievements />}
-        {hovering == "Certifications" && <Certifications />}
+        {hovering == "Skills" && <Skills {...Skills} setExpanded={setExpanded} />}
+        {hovering == "Achievements" && <Achievements {...achievements} setExpanded={setExpanded} />}
+        {hovering == "Certifications" && <Certifications {...certifications} setExpanded={setExpanded} />}
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridGap: '20px' }}>
 
