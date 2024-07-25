@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
-import { PieChart, pieArcLabelClasses } from "@mui/x-charts";
 
+import Pie from "./Pie";
 
 export default function Skills(props) {
   const container = {
@@ -21,6 +21,8 @@ export default function Skills(props) {
     fontWeight: 'bold',
   };
   const skillData = {
+    display: 'flex',
+    textAlign: 'left',
     font: `monospace`,
     color: 'white',
     fontSize: '15px',
@@ -40,13 +42,22 @@ export default function Skills(props) {
     color: 'white',
     cursor: 'pointer',
   };
-
-  const data = [
-    { id: 0, value: 33, name: 'Software' },
-    { id: 1, value: 33, name: 'AI' },
-    { id: 2, value: 33, name: 'Linux' },
-  ];
+  const pieInfo = {
+    // flex: 2,
+    display: 'flex',
+    font: `monospace`,
+    color: 'white',
+    fontSize: '15px',
+    margin: '15px 35px 0 0',
+    opacity: '0.8',
+    textAlign: 'left',
+    padding: '1rem',
+    height: 'auto',
+    borderRadius: '10px',
+    // backgroundColor: '#242424',
+  }
   
+  const [info, setInfo] = useState("");
 
   return (
     <>
@@ -61,30 +72,8 @@ export default function Skills(props) {
         </div>
         <div style={skillData}>
 
-        <PieChart
-          colors={['wheat', '#ffccff', '#ccffff']}
-          series={[
-            {
-              data,
-              paddingAngle: 5,
-              innerRadius: 50,
-              cornerRadius: 5,
-              startAngle: 0 - 60,
-              endAngle: 360 + 60,
-              arcLabel: (item) => `${item.name}`,
-              highlightScope: { faded: 'global', highlighted: 'item' },
-              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
-            },
-          ]}
-          sx={{
-            [`& .${pieArcLabelClasses.root}`]: {
-              fill: 'black',
-              fontSize: 14,
-              fontWeight: 'bold',
-            },
-          }}
-          height={400}
-        />
+          <Pie setInfo={setInfo}></Pie>
+          <div style={pieInfo}>{info}</div>
 
         </div>
       </div>
