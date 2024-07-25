@@ -5,7 +5,7 @@ import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 export default function Pie({ setInfo }) {
 
   const pieDiv = {
-    // flex: 3,
+    flex: 3,
     width: '100%',
   };
 
@@ -40,8 +40,8 @@ export default function Pie({ setInfo }) {
             paddingAngle: 5,
             innerRadius: 50,
             cornerRadius: 5,
-            startAngle: 0 - 60,
-            endAngle: 360 + 60,
+            startAngle: 0,
+            endAngle: 360,
             arcLabel: (item) => `${item.name}`,
             highlightScope: { faded: 'global', highlighted: 'item' },
             faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
@@ -55,21 +55,11 @@ export default function Pie({ setInfo }) {
             },
         }}
         tooltip={{ enabled: false }}
-        height={300}
-        onItemClick={(event, item) => {
-          if (item) {
-            setInfo(item.dataIndex);
-          } else {
-            setInfo("");
-          }
-          console.log(event, item);
-        }}
+        height={330}
         onHighlightChange={(item) => {
-          setInfo("");
           if (item) {
-            setInfo(item.dataIndex);
-          } else {
-          }
+            setInfo(data[item.dataIndex].skills);
+          } 
         }}
       />
   </div>
