@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import AboutDetails from "./AboutDetails";
 import AboutProfile from "./AboutProfile";
+import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 
 export default function About() {
   const styles = {
     laptopStyle: {
       position: 'relative',
       margin: 'auto',
+      width: '100%',
       maxWidth: '80rem',
     },
     laptopScreenStyle: {
@@ -38,7 +40,17 @@ export default function About() {
   };
 
   const smallScreen = {
-    ...styles
+    ...styles,
+    laptopStyle: {
+      ...styles.laptopStyle,
+      width: '100%',
+    },
+    laptopScreenStyle: {
+      ...styles.laptopScreenStyle,
+      flexDirection: 'column',
+      padding: '8px',
+      minHeight: '100vh',      
+    },
   };
 
   // State to hold the current styles

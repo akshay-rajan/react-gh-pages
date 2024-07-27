@@ -3,7 +3,6 @@ import { useState } from "react";
 import dp from "../assets/dp_cartoon.jpeg";
 import { Tooltip } from "@nextui-org/tooltip";
 
-
 export default function AboutProfile() {
   const flexLeft = {
     container: {
@@ -90,36 +89,58 @@ export default function AboutProfile() {
     },
   }
 
+  const smallScreen = {
+    imgContainer: {
+      borderRadius: '1.5rem 1.5rem 0 0',
+    },
+    dp: {
+      ...flexLeft.dp,
+      width: '140px',
+    },
+    ...flexLeft,
+    container: {
+      ...flexLeft.container,
+      display: 'flex',
+      borderRadius: '1.5rem 1.5rem 0 0',
+    },
+    details: {
+      ...flexLeft.details,
+      borderRadius: '1.5rem 1.5rem 1.5rem 1.5rem',
+    },
+  };
+
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <>
-      <div style={flexLeft.container}>
-        <div style={flexLeft.imgContainer}>
+      <div style={window.innerWidth < 798 ? smallScreen.container : flexLeft.container}>
+        <div style={window.innerWidth < 798 ? smallScreen.imgContainer : flexLeft.imgContainer}>
           <Tooltip content="👽️" showArrow={true} placement="right-end" color="foreground" offset={-100} >
-            <img src={dp} style={flexLeft.dp} alt="display picture" />
+            <img src={dp} style={window.innerWidth < 798 ? smallScreen.dp : flexLeft.dp} alt="display picture" />
           </Tooltip>
         </div>
-        <div style={flexLeft.details}>
-          <div style={flexLeft.name}>Akshay R</div>
-          <h3 style={flexLeft.greyFont}>akshay-rajan</h3>
-        </div>
-        <div style={flexLeft.desc}>
-          Software Developer | MCA 25' @ College of Engineering, Trivandrum
-          <div style={flexLeft.buttonDiv}>
-            <a href="https://github.com/akshay-rajan">
-              <button style={flexLeft.mainButton}>Github</button>
-            </a>
+        <div>
+          <div style={window.innerWidth < 798 ? smallScreen.details : flexLeft.details}>
+            <div style={flexLeft.name}>Akshay R</div>
+            <h3 style={flexLeft.greyFont}>akshay-rajan</h3>
           </div>
-          <div style={flexLeft.extras}>
-            <a 
-              href="https://akshay-rajan.github.io/" 
-              style={isHovered ? flexLeft.urlHover : flexLeft.url} 
-              onMouseEnter={() => setIsHovered(true)} 
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              akshay-rajan.github.io/
-            </a>
+          <div style={flexLeft.desc}>
+            Software Developer | MCA 25' @ College of Engineering, Trivandrum
+            <div style={flexLeft.buttonDiv}>
+              <a href="https://github.com/akshay-rajan">
+                <button style={flexLeft.mainButton}>Github</button>
+              </a>
+            </div>
+            <div style={flexLeft.extras}>
+              <a 
+                href="https://akshay-rajan.github.io/" 
+                style={isHovered ? flexLeft.urlHover : flexLeft.url} 
+                onMouseEnter={() => setIsHovered(true)} 
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                akshay-rajan.github.io/
+              </a>
+            </div>
           </div>
         </div>
       </div>

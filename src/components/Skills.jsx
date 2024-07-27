@@ -28,7 +28,6 @@ export default function Skills(props) {
     fontSize: '15px',
     margin: '15px 35px 0 0',
     opacity: '0.8',
-    textAlign: 'left',
     padding: '1rem',
     border: '0.1px solid rgb(100, 100, 100)',
     height: 'auto',
