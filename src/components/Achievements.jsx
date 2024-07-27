@@ -1,5 +1,9 @@
 import React from "react";
 
+import Badge from "./Badge";
+
+import BadgeLogo from "../assets/badge.png";
+
 export default function Achievements(props) {
   const container = {
     display: 'block',
@@ -17,14 +21,18 @@ export default function Achievements(props) {
     textAlign: 'left',
     fontWeight: 'bold',
   };
-  
-  
+
+  const logo = [BadgeLogo];
+    
   return (
     <>
       <div style={container}>
-        <div style={title} onMouseEnter={() => props.setExpanded(false)}>
-          Achievements
-        </div>
+        <div style={title} onMouseEnter={() => props.setExpanded(false)}>Achievements</div>
+        
+        {props.content.map((achievement, index) => {
+          console.log(achievement);
+          return <Badge key={index} logo={logo[0]} content={achievement} />
+        })}
       </div>
     </>
   );

@@ -22,9 +22,8 @@ export default function Certifications(props) {
   return (
     <>
       <div style={container}>
-        <div style={title} onMouseEnter={() => props.setExpanded(false)}>
-          Certifications
-        </div>
+        <div style={title} onMouseEnter={() => props.setExpanded(false)}>Certifications</div>
+        
       </div>
     </>
   );
