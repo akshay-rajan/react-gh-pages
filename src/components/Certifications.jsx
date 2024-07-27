@@ -1,9 +1,18 @@
 import React from "react";
+import Certificate from "./Certificate";
+import CloseIcon from '@mui/icons-material/Close';
+
+import cs50 from "../assets/cs50x.png";
+import ml from "../assets/acm_ml.png";
+import cs50w from "../assets/cs50w.png";
+import cyber from "../assets/google_cyber.png";
+import python from "../assets/nptel_python.png";
+
 
 export default function Certifications(props) {
   const container = {
     display: 'block',
-    font: `monospace`,
+    font: "`Times New Roman`, `serif`",
     position: 'relative',
     width: '100%',
     margin: '10px',
@@ -11,11 +20,23 @@ export default function Certifications(props) {
   };
   const title = {
     display: 'flex',
-    font: `monospace`,
     color: 'white',
     fontSize: '30px',
     textAlign: 'left',
     fontWeight: 'bold',
+  };
+  const certificates = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    margin: '10px',
+    padding: '10px',
+  };
+  const closeButton = {
+    position: 'absolute',
+    top: '20',
+    left: '90%',
+    color: 'white',
+    cursor: 'pointer',
   };
   
   const certifications = {
@@ -24,19 +45,34 @@ export default function Certifications(props) {
     points: ["Harvard", "Google", "IIT Madras", "ACM..."],
     content: [
       {
-        "certification": "Full Stack Web Development",
+        "certification": "CS50W: Web Programming with Python and JavaScript",
         "year": "2024",
-        "institution": "Udemy",
-      },
-      {
-        "certification": "Machine Learning",
-        "year": "2024",
-        "institution": "Coursera",
+        "institution": "Harvard University",
+        "image": cs50w,
       },
       {
         "certification": "Google Cybersecurity Professional",
         "year": "2024",
         "institution": "Coursera",
+        "image": cyber,
+      },
+      {
+        "certification": "Machine Learning using Python",
+        "year": "2024",
+        "institution": "Association of Computing Machinery",
+        "image": ml,
+      },
+      {
+        "certification": "CS50: Introduction to Computer Science",
+        "year": "2023",
+        "institution": "Harvard University",
+        "image": cs50,
+      },
+      {
+        "certification": "Programming, Data Structures and Algorithms using Python",
+        "year": "2024",
+        "institution": "IIT Madras (NPTEL)",
+        "image": python,
       },
     ],
   };
@@ -44,17 +80,15 @@ export default function Certifications(props) {
   return (
     <>
       <div style={container}>
-        <div style={title} onMouseEnter={() => props.setExpanded(false)}>Certifications</div>
-          {certifications.content.map((certification, index) => {
-            return (
-              <div className="certification-card" key={index}>
-                <div style={{color: "white", fontSize: "20px"}}>{certification.certification}</div>
-                <div style={{color: "grey"}}>{certification.year}</div>
-                <div style={{color: "grey"}}>{certification.institution}</div>
-              </div>
-            );
-          }
-        )}
+        <div style={title} onMouseEnter={() => props.setExpanded(false)}>
+          <div>Certifications</div>
+          <div style={closeButton}><CloseIcon /></div>
+        </div>
+          <div style={certificates}>
+            {certifications.content.map((certification, index) => 
+              <Certificate index={index} certification={certification} />
+            )}
+          </div>
       </div>
     </>
   );

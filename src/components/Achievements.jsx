@@ -1,5 +1,6 @@
 import React from "react";
 
+import CloseIcon from '@mui/icons-material/Close';
 import Badge from "./Badge";
 
 import badge1 from "../assets/badge.png";
@@ -23,13 +24,25 @@ export default function Achievements(props) {
     textAlign: 'left',
     fontWeight: 'bold',
   };
+  const closeButton = {
+    position: 'absolute',
+    top: '20',
+    left: '90%',
+    color: 'white',
+    cursor: 'pointer',
+  };
 
   const logo = [badge1, badge2, badge3];
     
   return (
     <>
       <div style={container}>
-        <div style={title} onMouseEnter={() => props.setExpanded(false)}>Achievements</div>
+        <div style={title} onMouseEnter={() => props.setExpanded(false)}>
+          Achievements
+          <div style={closeButton}>
+            <CloseIcon />
+          </div>
+        </div>
           <div className="achievements-list">
             {props.content.map((achievement, index) => {
               return <Badge key={index} logo={logo[index]} content={achievement} />
