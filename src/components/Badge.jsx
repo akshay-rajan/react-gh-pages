@@ -5,16 +5,15 @@ export default function Badge(props) {
     const container = {
         display: 'flex',
         font: `monospace`,
-        color: 'black',
+        color: 'white',
         fontSize: '15px',
         margin: '15px 35px 0 0',
         opacity: '0.8',
         textAlign: 'left',
         padding: '1rem',
-        border: '0.1px solid rgb(100, 100, 100)',
+        border: 'none',
         height: 'auto',
         borderRadius: '10px',
-        backgroundColor: 'wheat',
     };
     const logo = {
         width: '100px',
@@ -31,7 +30,7 @@ export default function Badge(props) {
     const additional = {
         display: 'flex',
         font: `monospace`,
-        color: 'black',
+        color: 'white',
         fontSize: '15px',
         textAlign: 'left',
         fontWeight: 'bold',

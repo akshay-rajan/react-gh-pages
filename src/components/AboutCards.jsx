@@ -63,23 +63,6 @@ export default function AboutCards({ isExpanded, setExpanded }) {
     title: "Certifications",
     description: "Proofs of sacrifices and dedication",
     points: ["Harvard", "Google", "IIT Madras", "ACM..."],
-    content: [
-      {
-        "certification": "Full Stack Web Development",
-        "year": "2024",
-        "institution": "Udemy",
-      },
-      {
-        "certification": "Machine Learning",
-        "year": "2024",
-        "institution": "Coursera",
-      },
-      {
-        "certification": "Google Cybersecurity Professional",
-        "year": "2024",
-        "institution": "Coursera",
-      },
-    ],
   };
 
   const achievements = {
@@ -125,7 +108,7 @@ export default function AboutCards({ isExpanded, setExpanded }) {
         {hovering == "Education" && <Education {...education} setExpanded={setExpanded} />}
         {hovering == "Skills" && <Skills {...Skills} setExpanded={setExpanded} />}
         {hovering == "Achievements" && <Achievements {...achievements} setExpanded={setExpanded} />}
-        {hovering == "Certifications" && <Certifications {...certifications} setExpanded={setExpanded} />}
+        {hovering == "Certifications" && <Certifications setExpanded={setExpanded} />}
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridGap: '20px' }}>
 

@@ -12,7 +12,6 @@ export default function Achievements(props) {
     display: 'block',
     font: `monospace`,
     position: 'relative',
-    width: '100%',
     margin: '10px',
     padding: '10px',
   };
