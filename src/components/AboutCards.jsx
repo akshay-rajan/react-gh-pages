@@ -42,56 +42,7 @@ export default function AboutCards({ isExpanded, setExpanded }) {
     title: "Skills",
     description: "Products of consistent learning and practice",
     points: ["Django", "React", "Python", "Java", "C..."],
-    content: [
-      {
-        "skill": "Django",
-      },
-      {
-        "skill": "Flask",
-      },
-      {
-        "skill": "Python",
-      },
-      {
-        "skill": "C",
-      },
-      {
-        "skill": "Java",
-      },
-      {
-        "skill": "HTML & CSS",
-      },
-      {
-        "skill": "JavaScript",
-      },
-      {
-        "skill": "Bootstrap",
-      },
-      {
-        "skill": "PHP",
-      },
-      {
-        "skill": "SQL",
-      },
-      {
-        "skill": "Linux",
-      },
-      {
-        "skill": "Cybersecurity",
-      },
-      {
-        "skill": "Git",
-      },
-      {
-        "skill": "Data Structures",
-      },
-      {
-        "skill": "Machine Learning",
-      },
-      {
-        "skill": "Mathematics",
-      },
-    ],
+    content: [],
   };
 
   // const experience = {

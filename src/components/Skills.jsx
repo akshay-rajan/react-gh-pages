@@ -44,6 +44,7 @@ export default function Skills(props) {
   };
   const pieInfo = {
     flex: 2,
+    width: '100%',
     font: `monospace`,
     color: 'white',
     fontSize: '15px',
@@ -56,10 +57,24 @@ export default function Skills(props) {
     // backgroundColor: '#242424',
   }
   const skillsList = {
-    columnCount: '2',
+    display: 'flex',
+    flexWrap: 'wrap',
     columnGap: '10px',
     padding: '0',
     margin: '0',
+  };
+  const skillStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '5px',
+    margin: '5px',
+    borderRadius: '5px',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    color: 'white',
+    fontSize: '12px',
+    fontWeight: 'bold',
+    width: 'auto',
   };
   
   const [info, setInfo] = useState([]);
@@ -79,11 +94,16 @@ export default function Skills(props) {
 
           <Pie setInfo={setInfo}></Pie>
           <div style={pieInfo}>
-            <ul style={skillsList}>
+            <div style={skillsList}>
               {info.map((item, index) => (
-                <li key={index}>{item}</li>
+                <div style={skillStyle} key={index}>
+                  
+                  {item.logo && <img src={item.logo} alt="" style={{ width: '20px', height: '20px', marginRight: '5px' }} />}
+                  {item.name}
+                  
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
         </div>

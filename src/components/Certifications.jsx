@@ -1,17 +1,30 @@
 import React from "react";
 
-export default function Certifications() {
+export default function Certifications(props) {
   const container = {
-    font: `monospace`,
     display: 'block',
-    borderRadius: '10px',
-    position: 'relative', 
+    font: `monospace`,
+    position: 'relative',
+    width: '100%',
+    margin: '10px',
+    padding: '10px',
   };
+  const title = {
+    display: 'flex',
+    font: `monospace`,
+    color: 'white',
+    fontSize: '30px',
+    textAlign: 'left',
+    fontWeight: 'bold',
+  };
+  
   
   return (
     <>
       <div style={container}>
-        Certifications
+        <div style={title} onMouseEnter={() => props.setExpanded(false)}>
+          Certifications
+        </div>
       </div>
     </>
   );
