@@ -31,11 +31,11 @@ export default function Achievements(props) {
     <>
       <div style={container}>
         <div style={title} onMouseEnter={() => props.setExpanded(false)}>Achievements</div>
-        
-        {props.content.map((achievement, index) => {
-          console.log(achievement);
-          return <Badge key={index} logo={logo[index]} content={achievement} />
-        })}
+          <div className="achievements-list">
+            {props.content.map((achievement, index) => {
+              return <Badge key={index} logo={logo[index]} content={achievement} />
+            })}
+          </div>        
       </div>
     </>
   );

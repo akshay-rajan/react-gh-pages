@@ -28,14 +28,22 @@ export default function Badge(props) {
         textAlign: 'left',
         fontWeight: 'bold',
     };
+    const additional = {
+        display: 'flex',
+        font: `monospace`,
+        color: 'black',
+        fontSize: '15px',
+        textAlign: 'left',
+        fontWeight: 'bold',
+    };
 
     return (
-        <div style={container}>
+        <div className="achievement-card" style={container}>
             <img src={props.logo} alt="badge" style={logo} />
             <div>
                 <div style={title}>{props.content.achievement}</div>
-                <div>{props.content.year}</div>
-                <div>{props.content.additional}</div>
+                <div style={additional}>{props.content.additional}</div>
+                <div style={{color: "grey"}}>{props.content.year}</div>
             </div>
         </div>
     );

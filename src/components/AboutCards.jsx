@@ -93,14 +93,14 @@ export default function AboutCards({ isExpanded, setExpanded }) {
         "additional": "University College, Trivandrum",
       },
       {
-        "achievement": "IIT JAM AIR 1778",
+        "achievement": "AIR 1778",
         "year": "2023",
-        "additional": "",
+        "additional": "IIT JAM ",
       },
       {
-        "achievement": "Rank 20 - Kerala MCA Entrance",
+        "achievement": "Rank 20",
         "year": "2023",
-        "additional": "",
+        "additional": "Kerala MCA Entrance",
       },
     ],
   };
