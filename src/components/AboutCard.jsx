@@ -47,11 +47,17 @@ export default function AboutCard(props) {
     marginTop: '5px',
     opacity: '0.8',
   }
+  const smallContainer = {
+    ...container,
+    display: 'block',
+    padding: '10px',
+    marginBottom: '5px',
+  };
 
   return (
     <>
       <div 
-        style={props.isExpanded ? {display: 'none'} : container} 
+        style={props.isExpanded ? {display: 'none'} : (window.innerWidth < 798 ? smallContainer : container)} 
         onMouseEnter={() => {
           props.setExpanded(true);
           props.setHovering(props.title);

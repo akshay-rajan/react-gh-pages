@@ -15,12 +15,16 @@ export default function AboutDetails() {
       background: '#000',
       borderRadius: '0 1.5rem 1.5rem 0',
     };
+    const smallScreen = {
+      ...container,
+      borderRadius: '0 0 1.5rem 1.5rem',
+    };
 
   const [isExpanded, setExpanded] = useState(false);
   
   return (
     <>
-      <div style={container} onMouseLeave={() => setExpanded(false)}>
+      <div style={window.innerWidth < 798 ? smallScreen : container} onMouseLeave={() => setExpanded(false)}>
         <AboutMe isExpanded={isExpanded} />
         <AboutCards 
           isExpanded={isExpanded} 

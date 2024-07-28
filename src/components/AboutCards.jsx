@@ -87,7 +87,6 @@ export default function AboutCards({ isExpanded, setExpanded }) {
       },
     ],
   };
-  
   const expanded = {
     display: 'block',
     position: 'relative',
@@ -95,14 +94,30 @@ export default function AboutCards({ isExpanded, setExpanded }) {
     height: '100%',
     width: '100%',
     borderRadius: '20px',
-  }
+  };
+  const cards = { 
+    display: 'grid', 
+    gridTemplateColumns: '1fr 1fr', 
+    gridGap: '20px' 
+  };
+
+  const smallWidth = {
+    cards: {
+      ...cards,
+      display: 'block',
+    },
+    expanded: {
+      ...expanded,
+      display: 'block',
+    }
+  };
 
   const [hovering, setHovering] = useState("none");
 
   return (
     <>
       <div 
-        style={isExpanded ? expanded : {display: 'none'}} 
+        style={isExpanded ? (window.innerWidth < 798 ? smallWidth.expanded : expanded) : {display: 'none'}}
         onMouseLeave={() => setExpanded(false)
       }>
         {hovering == "Education" && <Education {...education} setExpanded={setExpanded} />}
@@ -110,8 +125,7 @@ export default function AboutCards({ isExpanded, setExpanded }) {
         {hovering == "Achievements" && <Achievements {...achievements} setExpanded={setExpanded} />}
         {hovering == "Certifications" && <Certifications setExpanded={setExpanded} />}
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridGap: '20px' }}>
-
+      <div style={window.innerWidth < 798 ? smallWidth.cards : cards }>
 
         <AboutCard {...education} isExpanded={isExpanded} setExpanded={setExpanded} setHovering={setHovering} />
         <AboutCard {...skills}  isExpanded={isExpanded} setExpanded={setExpanded} setHovering={setHovering} />
