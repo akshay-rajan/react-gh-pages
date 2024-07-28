@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import dp from "../assets/dp_cartoon.jpeg";
 import { Tooltip } from "@nextui-org/tooltip";
+import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 
 export default function AboutProfile() {
   const flexLeft = {
@@ -90,14 +91,12 @@ export default function AboutProfile() {
   }
 
   const smallScreen = {
-    imgContainer: {
-      borderRadius: '1.5rem 1.5rem 0 0',
-    },
-    dp: {
-      ...flexLeft.dp,
-      width: '140px',
-    },
     ...flexLeft,
+    dp: {
+      width: '150px',
+      borderRadius: '50%',
+      border: '1px solid wheat',
+    },
     container: {
       ...flexLeft.container,
       display: 'flex',
@@ -105,11 +104,24 @@ export default function AboutProfile() {
     },
     details: {
       ...flexLeft.details,
+      padding: '1rem',
+      paddingTop: '0',
+      paddingBottom: '2px',
       borderRadius: '1.5rem 1.5rem 1.5rem 1.5rem',
     },
+    buttonDiv: {
+      ...flexLeft.buttonDiv,
+      margin: '0',
+    },
+    extras: {
+      ...flexLeft.extras,
+      margin: '0',
+    }
   };
 
   const [isHovered, setIsHovered] = useState(false);
+
+  console.log(window.innerWidth);
 
   return (
     <>
@@ -124,14 +136,14 @@ export default function AboutProfile() {
             <div style={flexLeft.name}>Akshay R</div>
             <h3 style={flexLeft.greyFont}>akshay-rajan</h3>
           </div>
-          <div style={flexLeft.desc}>
+          <div style={window.innerWidth < 798 ? smallScreen.details : flexLeft.desc}>
             Software Developer | MCA 25' @ College of Engineering, Trivandrum
-            <div style={flexLeft.buttonDiv}>
+            <div style={window.innerWidth ? smallScreen.buttonDiv : flexLeft.buttonDiv}>
               <a href="https://github.com/akshay-rajan">
                 <button style={flexLeft.mainButton}>Github</button>
               </a>
             </div>
-            <div style={flexLeft.extras}>
+            <div style={window.innerHeight ? smallScreen.extras : flexLeft.extras}>
               <a 
                 href="https://akshay-rajan.github.io/" 
                 style={isHovered ? flexLeft.urlHover : flexLeft.url} 
