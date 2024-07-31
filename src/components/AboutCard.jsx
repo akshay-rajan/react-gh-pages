@@ -50,9 +50,7 @@ export default function AboutCard(props) {
   const smallContainer = {
     font: `monospace`,
     fontSize: '15px',
-    paddingTop: '15px',
     marginLeft: '0',
-    marginTop: '0',
     textAlign: 'left',
     display: 'block',
     backgroundColor: 'black',
@@ -62,8 +60,8 @@ export default function AboutCard(props) {
     background: '#000',
     border: '0.1px solid rgb(100, 100, 100)',
     borderRadius: '10px',
-    display: 'block',
     padding: '10px',
+    marginTop: '0',
     marginBottom: '5px',
   };
 
