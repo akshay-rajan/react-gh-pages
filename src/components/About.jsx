@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AboutDetails from "./AboutDetails";
 import AboutProfile from "./AboutProfile";
-import { width } from "@fortawesome/free-solid-svg-icons/fa0";
+
 
 export default function About() {
   const styles = {
@@ -73,13 +73,15 @@ export default function About() {
     return () => window.removeEventListener("resize", handleResize); 
   }, []);
 
+  const [isExpanded, setExpanded] = useState(false);
+
   return (
     <main>
       <div className="container">
         <div className="laptop" style={currentStyles.laptopStyle}>
           <div className="laptop__screen" style={currentStyles.laptopScreenStyle}>
             <AboutProfile />
-            <AboutDetails />
+            <AboutDetails isExpanded={isExpanded} setExpanded={setExpanded} />
           </div>
           <div className="laptop__shadow" style={currentStyles.laptopShadowStyle}></div>
         </div>

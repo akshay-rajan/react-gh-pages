@@ -121,8 +121,6 @@ export default function AboutProfile() {
 
   const [isHovered, setIsHovered] = useState(false);
 
-  console.log(window.innerWidth);
-
   return (
     <>
       <div style={window.innerWidth < 798 ? smallScreen.container : flexLeft.container}>

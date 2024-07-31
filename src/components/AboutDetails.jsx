@@ -4,7 +4,7 @@ import AboutMe from "./AboutMe";
 import AboutCards from "./AboutCards";
 
 
-export default function AboutDetails() {
+export default function AboutDetails({ isExpanded, setExpanded }) {
   const container = {
       flex: 4,
       padding: '1rem',
@@ -19,8 +19,6 @@ export default function AboutDetails() {
       ...container,
       borderRadius: '0 0 1.5rem 1.5rem',
     };
-
-  const [isExpanded, setExpanded] = useState(false);
   
   return (
     <>

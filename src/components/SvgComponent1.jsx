@@ -3,9 +3,17 @@ import react from "react";
 
 export default function SvgComponent1(props) {
 
+  const svgStyle = {
+    width: '100%',
+    height: '120px',
+  }
+  const hide = {
+    display: 'none',
+  }
+
   return (
     <>
-      <svg style={{width: "100%", height: "120px"}} viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+      <svg style={window.innerWidth < 798 ? hide : svgStyle} viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
         {/*
           Moveto(265, 0) and draw a cubic Beizer curve CurveTo(1050, 605)
           The cubic Beizer curve is defined by two control points and an end point

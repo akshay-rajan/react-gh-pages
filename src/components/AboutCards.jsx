@@ -114,6 +114,14 @@ export default function AboutCards({ isExpanded, setExpanded }) {
 
   const [hovering, setHovering] = useState("none");
 
+  if (isExpanded) {
+    const distanceToTop = document.querySelector('.more-details').getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+        top: distanceToTop,
+        behavior: "smooth"
+    });
+  }
+
   return (
     <>
       <div 
@@ -125,7 +133,7 @@ export default function AboutCards({ isExpanded, setExpanded }) {
         {hovering == "Achievements" && <Achievements {...achievements} setExpanded={setExpanded} />}
         {hovering == "Certifications" && <Certifications setExpanded={setExpanded} />}
       </div>
-      <div style={window.innerWidth < 798 ? smallWidth.cards : cards }>
+      <div style={window.innerWidth < 798 ? smallWidth.cards : cards } className="more-details">
 
         <AboutCard {...education} isExpanded={isExpanded} setExpanded={setExpanded} setHovering={setHovering} />
         <AboutCard {...skills}  isExpanded={isExpanded} setExpanded={setExpanded} setHovering={setHovering} />
