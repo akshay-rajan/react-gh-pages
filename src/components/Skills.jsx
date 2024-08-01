@@ -42,7 +42,7 @@ export default function Skills(props) {
     cursor: 'pointer',
   };
   const pieInfo = {
-    flex: 2,
+    flex: 5,
     width: '100%',
     font: `monospace`,
     color: 'white',
@@ -53,7 +53,6 @@ export default function Skills(props) {
     padding: '1rem',
     maxHeight: '330px',    
     borderRadius: '10px',
-    // backgroundColor: '#242424',
   }
   const skillsList = {
     display: 'flex',
