@@ -85,10 +85,20 @@ export default function Pie({ setInfo }) {
               startAngle: 0,
               endAngle: 360,
               arcLabel: (item) => `${item.name}`,
-              highlightScope: { faded: 'global', highlighted: 'item' },
-              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+              highlightScope: { 
+                faded: 'global', 
+                highlighted: 'item' 
+              },
+              faded: { 
+                innerRadius: 30, 
+                additionalRadius: -30, 
+                color: 'grey',
+              },
+              highlighted: { 
+                innerRadius: 50, 
+                additionalRadius: 10, 
             },
-        ]}
+        }]}
         sx={{
             [`& .${pieArcLabelClasses.root}`]: {
             fill: 'black',
