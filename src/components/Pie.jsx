@@ -78,15 +78,15 @@ export default function Pie({ setInfo }) {
         colors={['wheat', '#ffccff', '#ccffff']}
         series={[
             {
-            data,
-            paddingAngle: 5,
-            innerRadius: 50,
-            cornerRadius: 5,
-            startAngle: 0,
-            endAngle: 360,
-            arcLabel: (item) => `${item.name}`,
-            highlightScope: { faded: 'global', highlighted: 'item' },
-            faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
+              data,
+              paddingAngle: 5,
+              innerRadius: 50,
+              cornerRadius: 5,
+              startAngle: 0,
+              endAngle: 360,
+              arcLabel: (item) => `${item.name}`,
+              highlightScope: { faded: 'global', highlighted: 'item' },
+              faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
             },
         ]}
         sx={{
