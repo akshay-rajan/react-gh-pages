@@ -202,3 +202,66 @@ button:focus-visible {
   }
 }
 
+/* ! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* ! Skills animation */
+
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Links styles */
+.links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.link-1, .link-2, .link-3, .link-4 {
+  margin: 0 10px;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#hamburger {
+  cursor: pointer;
+}
+
+.nav-links {
+  display: none;
+}
+
+.nav-links.on-top {
+  display: block;
+}
+
+@media (min-width: 601px) {
+  .nav-links {
+    display: block;
+  }
+}
+
+

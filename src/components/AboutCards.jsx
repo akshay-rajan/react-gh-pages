@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import AboutCard from "./AboutCard";
 import Education from "./Education";
@@ -108,23 +108,23 @@ export default function AboutCards({ isExpanded, setExpanded }) {
     },
     expanded: {
       ...expanded,
-      display: 'block',
     }
   };
 
   const [hovering, setHovering] = useState("none");
 
-  if (isExpanded) {
-    const distanceToTop = document.querySelector('.more-details').getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({
-        top: distanceToTop,
-        behavior: "smooth"
-    });
-  }
+  const topElement = useRef(null);
+
+  useEffect(() => {
+    if (topElement.current && isExpanded) {
+      topElement.current.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }, []);
 
   return (
-    <>
+    <div ref={topElement}>
       <div 
+        className="expandedDiv"
         style={isExpanded ? (window.innerWidth < 798 ? smallWidth.expanded : expanded) : {display: 'none'}}
         onMouseLeave={() => setExpanded(false)
       }>
@@ -133,6 +133,7 @@ export default function AboutCards({ isExpanded, setExpanded }) {
         {hovering == "Achievements" && <Achievements {...achievements} setExpanded={setExpanded} />}
         {hovering == "Certifications" && <Certifications setExpanded={setExpanded} />}
       </div>
+
       <div style={window.innerWidth < 798 ? smallWidth.cards : cards } className="more-details">
 
         <AboutCard {...education} isExpanded={isExpanded} setExpanded={setExpanded} setHovering={setHovering} />
@@ -141,6 +142,6 @@ export default function AboutCards({ isExpanded, setExpanded }) {
         <AboutCard {...achievements} isExpanded={isExpanded} setExpanded={setExpanded} setHovering={setHovering} />
 
       </div>
-    </>
+    </div>
   );
 };
