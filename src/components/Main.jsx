@@ -4,8 +4,11 @@ const Main = () => (
   <div className="main">
     <div className="first quarter">
       <div className="name-container">
-        <div className="name-intro">Hey, I'm</div>
-        <h1 className="name">Akshay Rajan</h1>
+        <div className="name-intro"></div>
+        <h1 className="name marquee">
+          <span className="m1">SOFTWARE DEVELOPER</span>
+          <span className="m2">SOFTWARE DEVELOPER</span>
+        </h1>
         <div className="skills"></div>
       </div>
     </div>
