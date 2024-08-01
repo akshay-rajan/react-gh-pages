@@ -1,5 +1,5 @@
 import React from 'react';
-import loaderImage from '../assets/loader.jpg';
+import loaderImage from '../assets/loader.gif';
 
 const Loader = () => (
   <div id="preloader">

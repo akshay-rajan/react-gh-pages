@@ -204,6 +204,10 @@ button:focus-visible {
 
 /* ! >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
+body {
+  background-color: black;
+}
+
 /* ! Skills animation */
 
 .skills {
