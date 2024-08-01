@@ -73,7 +73,7 @@ export default function Pie({ setInfo }) {
   ];
   
   return (
-    <div style={pieDiv}>
+    <div style={window.innerWidth < 798 ? {display: 'flex', justifyContent: 'center' , alignItems: 'center'} : pieDiv}>
       <PieChart
         colors={['wheat', '#ffccff', '#ccffff']}
         series={[

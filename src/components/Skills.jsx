@@ -75,6 +75,22 @@ export default function Skills(props) {
     fontWeight: 'bold',
     width: 'auto',
   };
+
+  const small = {
+    skillData: {
+      display: 'block',
+      textAlign: 'center',
+      font: `monospace`,
+      color: 'white',
+      fontSize: '15px',
+      margin: '15px 35px 0 0',
+      opacity: '0.8',
+      padding: '1rem',
+      border: '0.1px solid rgb(100, 100, 100)',
+      height: 'auto',
+      borderRadius: '10px',
+    },
+  }
   
   const [info, setInfo] = useState([]);
 
@@ -89,9 +105,10 @@ export default function Skills(props) {
             <CloseIcon />
           </div>
         </div>
-        <div style={skillData}>
+        <div style={window.innerWidth < 798 ? small.skillData : skillData}>
 
           <Pie setInfo={setInfo}></Pie>
+
           <div style={pieInfo}>
             <div style={skillsList}>
               {info.map((item, index) => (
