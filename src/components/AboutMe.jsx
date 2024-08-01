@@ -33,11 +33,11 @@ export default function AboutMe({ isExpanded }) {
           About Me
         </div>
         <div>
-          As an aspiring programmer with a passion for technology, I am committed to continuous learning and professional growth. 
-          My goal is to build a robust career in Computer Science, where I can contribute to and make a significant impact in various innovative fields.
-          My interests span across a diverse range of disciplines within technology, including Web Programming, App Development, Artificial Intelligence, Data Science, and Cyber Security. 
-          With each day, I strive to enhance my skills and knowledge, staying abreast of the latest trends and advancements in technology. 
-          I am currently working on my skills in Machine Learning and Cybersecurity. 
+        From the precision of numbers to the creativity of code... <br/>
+
+        I graduated with a degree in Mathematics, from University College Trivandrum. After realizing that programming is where my passion lies, I decided to pursue MCA and I'm currently a final year student at the College of Engineering, Trivandrum. <br/>
+
+        I have acquired skills in Web Development using Django and I'm currently expanding my knowledge in various areas including Blockchain, Linux, Cybersecurity, AI and Machine Learning. Solving problems on LeetCode is one of my favorite ways to sharpen my analytical and coding skills.
         </div>
       </div>
     </>
