@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
 
+import proj1 from '../assets/proj1.png';
+import proj2 from '../assets/proj2.png';
+import proj3 from '../assets/proj3.png';
+
 const Projects = () => {
   const [activeProject, setActiveProject] = useState(null);
 
@@ -8,21 +12,21 @@ const Projects = () => {
     {
       id: 1,
       title: 'Project 1',
-      image: 'static/proj1.jpg',
+      image: proj1,
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
       techStack: ['HTML', 'CSS', 'JavaScript']
     },
     {
       id: 2,
       title: 'Project 2',
-      image: 'static/proj2.jpg',
+      image: proj2,
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
       techStack: ['Python', 'Flask', 'SQL']
     },
     {
       id: 3,
       title: 'Project 3',
-      image: 'static/proj3.jpg',
+      image: proj3,
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
       techStack: ['React', 'Node.js', 'MongoDB']
     }

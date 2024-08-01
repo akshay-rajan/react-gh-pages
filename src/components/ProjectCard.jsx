@@ -4,7 +4,7 @@ const ProjectCard = ({ project, isActive, showProjectDetails }) => (
   <div className={`project-card ${isActive ? 'active' : ''}`} onClick={() => showProjectDetails(project.id)}>
     <div className="project-card-inner">
       <div className="project-card-front">
-        <img src={project.image} alt={project.title} />
+        <img src={project.image} alt={project.title} width="150px" />
         <h3>{project.title}</h3>
       </div>
       {isActive && (
