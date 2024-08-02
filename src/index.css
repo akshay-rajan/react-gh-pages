@@ -15,6 +15,7 @@
 
 body {
   background-color: black;
+  transition: background-color 1s;
 }
 
 /* ! ABOUT */
@@ -73,7 +74,7 @@ button:focus-visible {
   }
 }
 
-/* ! Achievements */
+/* Achievements */
 
 .achievements-list {
   display: flex;
@@ -123,7 +124,7 @@ button:focus-visible {
   transform: translateX(100%);
 }
 
-/* ! Certificate */
+/* Certificate */
 
 .certification-card {
   display: flex;
@@ -206,8 +207,6 @@ button:focus-visible {
 /* ! NAVBAR (Header) */
 
 .header {
-  background-color: black;
-  opacity: 0.6;
   color: white;
   padding: 4px 0;
   position: sticky;
@@ -254,7 +253,6 @@ button:focus-visible {
 }
 
 #hamburger {
-  background: none;
   border: none;
   color: white;
   font-size: 24px;
@@ -278,6 +276,69 @@ button:focus-visible {
     display: block;
   }
 }
+
+/* <<<<<<<<<<<<<<<Nav to Right>>>>>>>>>>>>>> */
+
+.scrolled.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  z-index: 0;
+}
+
+.scrolled .head-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scrolled .navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scrolled .nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.scrolled .nav-links li {
+  margin: 1rem 0;
+  margin: 30px 0 30px 0;
+}
+
+.scrolled .nav-links a {
+  transform: rotate(90deg);
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2rem;
+}
+.scrolled .nav-links a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-style: solid;
+  text-decoration-color: wheat;
+}
+.scrolled #hamburger {
+  margin-top: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.scrolled #hamburger i {
+  font-size: 1.5rem;
+  color: #000; 
+}
+
 
 /* ! MAIN */
 #home {

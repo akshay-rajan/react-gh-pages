@@ -11,7 +11,7 @@ export default function Header() {
             <li><a href="#projects" id="projects-button">Projects</a></li>
             <li><a href="#contact" id="contact-button">Contact</a></li>
           </ul>
-          <button id="hamburger" className="js-enabled">
+          <button style={{color: 'white'}} id="hamburger" className="js-enabled">
             <i className="fas fa-bars"></i>
           </button>
         </nav>

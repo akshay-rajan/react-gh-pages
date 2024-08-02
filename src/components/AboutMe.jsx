@@ -1,3 +1,4 @@
+import { color } from "dat.gui";
 import React from "react";
 
 export default function AboutMe({ isExpanded }) {
@@ -5,6 +6,7 @@ export default function AboutMe({ isExpanded }) {
     container: {
       font: `monospace`,
       fontSize: '15px',
+      color: 'white',
       padding: '1rem',
       marginLeft: '0',
       marginBottom: '1rem',
@@ -20,7 +22,6 @@ export default function AboutMe({ isExpanded }) {
     },
     heading: {
       font: `monospace`,
-      color: 'wheat',
       fontSize: '25px',
       fontWeight: 'bold',
     },

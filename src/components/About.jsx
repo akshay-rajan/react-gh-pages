@@ -11,6 +11,7 @@ export default function About() {
       width: '100%',
       maxWidth: '80rem',
       overflow: 'hidden',
+      zIndex: 1,
     },
     laptopScreenStyle: {
       display: 'flex',
@@ -75,6 +76,34 @@ export default function About() {
   }, []);
 
   const [isExpanded, setExpanded] = useState(false);
+
+  // * Change the background color to white and move the navbar 
+  // * when the about section is at the top of the viewport
+  useEffect(() => {
+    const handleScroll = () => {
+      const aboutSection = document.getElementById('about');
+      const body = document.body;
+      const nav = document.querySelector('#home');
+      const rect = aboutSection.getBoundingClientRect();
+
+      if (rect.top < 50) {
+        body.style.backgroundColor = 'white';
+        body.style.color = 'black';
+        nav.classList.add('scrolled');
+      } else {
+        body.style.backgroundColor = 'transparent';
+        nav.classList.remove('scrolled');
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <main>
