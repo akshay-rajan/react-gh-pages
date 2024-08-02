@@ -10,6 +10,7 @@ export default function About() {
       margin: 'auto',
       width: '100%',
       maxWidth: '80rem',
+      overflow: 'hidden',
     },
     laptopScreenStyle: {
       display: 'flex',
@@ -77,7 +78,7 @@ export default function About() {
 
   return (
     <main>
-      <div className="container">
+      <div className="container" id="about">
         <div className="laptop" style={currentStyles.laptopStyle}>
           <div className="laptop__screen" style={currentStyles.laptopScreenStyle}>
             <AboutProfile />
