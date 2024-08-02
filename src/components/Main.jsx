@@ -1,8 +1,12 @@
 import React from 'react';
+import BackgroundAnimation from './BackgroundAnimation';
 
 const Main = () => (
   <div className="main" id="home">
-    <div className="first quarter">
+    <div className="bg">
+      <BackgroundAnimation />
+    </div>
+    <div className="content first quarter">
       <div className="name-container">
         <div className="name-intro"></div>
         <h1 className="name marquee">
@@ -15,9 +19,6 @@ const Main = () => (
         <div className="skills"></div>
       </div>
     </div>
-    <div className="second quarter"></div>
-    <div className="third quarter"></div>
-    <div className="fourth quarter"></div>
   </div>
 );
 

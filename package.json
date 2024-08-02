@@ -19,8 +19,10 @@
     "@mui/material": "^5.16.4",
     "@mui/x-charts": "^7.11.0",
     "@nextui-org/tooltip": "^2.0.39",
+    "dat.gui": "^0.7.9",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "stage-js": "^1.0.0-alpha.2"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
