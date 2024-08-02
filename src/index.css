@@ -292,9 +292,11 @@ button:focus-visible {
   display: inline-block;
   color: white;
   font-size: 200px;
-  line-height: 500px;
+  line-height: 70vh;
   animation: marquee 12s linear infinite;
   padding: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }  
 .marquee span div {
   color: wheat;
