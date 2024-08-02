@@ -12,16 +12,19 @@ import Contact from './components/Contact'
 function App() {
 
   const [loading, setLoading] = useState(true);
+  
 
   useEffect(() => {
-    const handleLoad = () => {
+    window.addEventListener('load', () => {
       setLoading(false);
-    };
-    window.addEventListener('load', handleLoad);
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
+    });
   }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+  });
 
   return (
     <>

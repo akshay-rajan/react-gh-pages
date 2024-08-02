@@ -18,7 +18,7 @@ export default function About() {
       position: 'relative',
       zIndex: 1,
       padding: '10px',
-      minHeight: '90vh',
+      minHeight: '80vh',
       width: '90vw',
       borderRadius: '2rem',
       background: '#ecf1f7',
@@ -86,13 +86,15 @@ export default function About() {
       const nav = document.querySelector('#home');
       const rect = aboutSection.getBoundingClientRect();
 
-      if (rect.top < 50) {
+      if (rect.top < 40) {
         body.style.backgroundColor = 'white';
         body.style.color = 'black';
         nav.classList.add('scrolled');
+        aboutSection.style.paddingTop = '40px';
       } else {
         body.style.backgroundColor = 'transparent';
         nav.classList.remove('scrolled');
+        aboutSection.style.paddingTop = '0px';
       }
     };
 

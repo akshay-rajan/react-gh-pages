@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 export default function Header() {
   return (
@@ -6,10 +7,51 @@ export default function Header() {
       <div className="head-container">
         <nav className="navbar">
           <ul className="nav-links">
-            <li><a href="#home" id="home-button">Home</a></li>
-            <li><a href="#about" id="about-button">About</a></li>
-            <li><a href="#projects" id="projects-button">Projects</a></li>
-            <li><a href="#contact" id="contact-button">Contact</a></li>
+            <li>
+              <Link 
+                to="" 
+                smooth={true} 
+                duration={800} 
+                offset={-70}
+                id="home-button"
+                onClick={() => scroll.scrollToTop()}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="about" 
+                smooth={true} 
+                duration={800} 
+                offset={-70}
+                id="about-button"
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="projects" 
+                smooth={true} 
+                duration={800} 
+                offset={-40}
+                id="projects-button"
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="contact" 
+                smooth={true} 
+                duration={800} 
+                offset={-40}
+                id="contact-button"
+              >
+                Contact
+              </Link>
+            </li>
           </ul>
           <button style={{color: 'white'}} id="hamburger" className="js-enabled">
             <i className="fas fa-bars"></i>
