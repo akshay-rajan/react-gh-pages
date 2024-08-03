@@ -24,7 +24,7 @@ export default function Header() {
                 to="about" 
                 smooth={true} 
                 duration={800} 
-                offset={-70}
+                offset={10}
                 id="about-button"
               >
                 About
@@ -35,7 +35,7 @@ export default function Header() {
                 to="projects" 
                 smooth={true} 
                 duration={800} 
-                offset={-40}
+                offset={20}
                 id="projects-button"
               >
                 Projects
@@ -46,16 +46,16 @@ export default function Header() {
                 to="contact" 
                 smooth={true} 
                 duration={800} 
-                offset={-40}
+                offset={20}
                 id="contact-button"
               >
                 Contact
               </Link>
             </li>
           </ul>
-          <button style={{color: 'white'}} id="hamburger" className="js-enabled">
+          {/* <button style={{color: 'white'}} id="hamburger" className="js-enabled">
             <i className="fas fa-bars"></i>
-          </button>
+          </button> */}
         </nav>
       </div>
     </div>

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
+import AppsIcon from '@mui/icons-material/Apps';
 
 import proj1 from '../assets/proj1.png';
 import proj2 from '../assets/proj2.png';
 import proj3 from '../assets/proj3.png';
+
 
 const Projects = () => {
   const [activeProject, setActiveProject] = useState(null);
@@ -36,9 +38,26 @@ const Projects = () => {
     setActiveProject(id);
   };
 
+  const styles = {
+    container: {
+      padding: '4rem 0',
+      position: 'relative',
+      zIndex: 1,
+    },
+    heading: {
+      textAlign: 'left',
+      margin: '2rem',
+      fontSize: '2rem',
+      zIndex: 1,
+    },
+  }
+
   return (
-    <div className="projects" id="projects">
-      <h2>My Portfolio</h2>
+    <div className="projects" id="projects" style={styles.container}>
+      <h2 style={styles.heading}>
+        <AppsIcon />
+        Portfolio
+      </h2>
       <div className="portfolio">
         {projects.map(project => (
           <ProjectCard

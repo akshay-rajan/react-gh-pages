@@ -1,7 +1,13 @@
 import React from 'react';
 
-const ProjectCard = ({ project, isActive, showProjectDetails }) => (
-  <div className={`project-card ${isActive ? 'active' : ''}`} onClick={() => showProjectDetails(project.id)}>
+const ProjectCard = ({ project, isActive, showProjectDetails }) => {
+  const styles = {
+    container: {
+      zIndex: 1,
+    },
+  };
+  return (
+  <div className={`project-card ${isActive ? 'active' : ''}`} onClick={() => showProjectDetails(project.id)} style={styles.container}>
     <div className="project-card-inner">
       <div className="project-card-front">
         <img src={project.image} alt={project.title} width="150px" />
@@ -20,6 +26,6 @@ const ProjectCard = ({ project, isActive, showProjectDetails }) => (
       )}
     </div>
   </div>
-);
+)};
 
 export default ProjectCard;
