@@ -475,9 +475,7 @@ button:focus-visible {
 .project-card.left {
   flex: 1;
   float: left;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
 }
 .project-card.right {
   flex: 1;
@@ -490,4 +488,53 @@ button:focus-visible {
 .project-image {
   width: 500px;
   height: auto;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__year, .card__cometOuter, .card__circle, .card__smallCircle, .card__orangeShine, .card__greenShine, .card__thankyou, .card__outer-year {
+  position: absolute;
+  pointer-events: none;
+}
+
+
+.card__greenShine {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 20%;
+  top: 0;
+  bottom: 0;
+  width: 400px;
+  z-index: 1;
+}
+
+.card__thankyou {
+  font-family: 'Oswald', sans-serif;
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: 100;
+  left: 33%;
+  bottom: 20%;
+  z-index: 2;
+  font-size: 30px;
+  color: black;
+  text-align: center;
+}
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.project-stack img {
+  padding: 10px;
 }
