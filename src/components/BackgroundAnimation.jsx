@@ -35,7 +35,7 @@ const BackgroundAnimation = () => {
         return this;
       },
       draw() {
-        $.strokeStyle = `hsla(${this.hue}, 100%, 50%, ${this.alpha})`;
+        $.strokeStyle = `hsla(${Math.random() * 10 + 50}, 100%, 50%, ${this.alpha})`;
         $.beginPath();
         $.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
         $.stroke();

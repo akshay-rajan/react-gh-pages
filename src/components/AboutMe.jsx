@@ -1,4 +1,3 @@
-import { color } from "dat.gui";
 import React from "react";
 
 export default function AboutMe({ isExpanded }) {

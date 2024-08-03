@@ -1,31 +1,28 @@
 import React from 'react';
 
-const ProjectCard = ({ project, isActive, showProjectDetails }) => {
-  const styles = {
-    container: {
-      zIndex: 1,
-    },
-  };
+const ProjectCard = ({ project, isActive, toggleProject }) => {
   return (
-  <div className={`project-card ${isActive ? 'active' : ''}`} onClick={() => showProjectDetails(project.id)} style={styles.container}>
-    <div className="project-card-inner">
-      <div className="project-card-front">
-        <img src={project.image} alt={project.title} width="150px" />
-        <h3>{project.title}</h3>
+    <div className={`project-card ${isActive ? 'is-expanded' : 'is-collapsed'}`} onClick={() => toggleProject(project.id)}>
+      <div className="project-card__inner">
+        <span>{project.title}</span>
+        <i className="fa fa-folder-o"></i>
       </div>
-      {isActive && (
-        <div className="project-card-back">
-          <h4>{project.title}</h4>
-          <p>{project.description}</p>
-          <div className="tech-stack">
-            {project.techStack.map((tech, index) => (
-              <span key={index} className="tech">{tech}</span>
-            ))}
-          </div>
+
+      <div className="project-card__expander">
+        <i className="fa fa-close" onClick={(e) => {
+          e.stopPropagation();
+          toggleProject(null);
+        }}></i>
+        <h4>{project.title}</h4>
+        <p>{project.description}</p>
+        <div className="project-tech-stack">
+          {project.techStack.map((tech, index) => (
+            <span key={index} className="project-tech">{tech}</span>
+          ))}
         </div>
-      )}
+      </div>
     </div>
-  </div>
-)};
+  );
+};
 
 export default ProjectCard;
