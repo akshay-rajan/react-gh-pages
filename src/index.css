@@ -437,6 +437,9 @@ button:focus-visible {
 }
 
 /* ! PROJECTS */
+#projects {
+  background-color: 'transparent';
+}
 
 .project-wrapper {
   margin: 1em;
