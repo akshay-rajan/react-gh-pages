@@ -1,18 +1,16 @@
 import React from 'react';
+import ProjectImage from './ProjectImage';
 
-const ProjectCard = ({ project, isActive, toggleProject }) => {
+
+const ProjectCard = ({ project }) => {
+
   return (
-    <div className={`project-card ${isActive ? 'is-expanded' : 'is-collapsed'}`} onClick={() => toggleProject(project.id)}>
-      <div className="project-card__inner">
-        <span>{project.title}</span>
-        <i className="fa fa-folder-o"></i>
+    <div className="project-card">
+      <div className="project-card left">
+        <ProjectImage project={project} />
       </div>
 
-      <div className="project-card__expander">
-        <i className="fa fa-close" onClick={(e) => {
-          e.stopPropagation();
-          toggleProject(null);
-        }}></i>
+      <div className="project-card right">
         <h4>{project.title}</h4>
         <p>{project.description}</p>
         <div className="project-tech-stack">
