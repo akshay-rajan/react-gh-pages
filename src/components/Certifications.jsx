@@ -86,7 +86,7 @@ export default function Certifications(props) {
         </div>
           <div style={certificates}>
             {certifications.content.map((certification, index) => 
-              <Certificate index={index} certification={certification} />
+              <Certificate key={index} index={index} certification={certification} />
             )}
           </div>
       </div>

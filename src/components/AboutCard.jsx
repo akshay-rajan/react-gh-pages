@@ -79,8 +79,8 @@ export default function AboutCard(props) {
           {props.description}
         </div>
         <div style={points}>
-          {props.points.map((point) => (
-            <li style={item}>⚫ {point} </li>
+          {props.points.map((point, index) => (
+            <li style={item} key={index}>⚫ {point} </li>
           ))}
         </div>
       </div>
