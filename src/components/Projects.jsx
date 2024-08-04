@@ -22,7 +22,7 @@ const Projects = () => {
         'https://brandlogos.net/wp-content/uploads/2021/09/bootstrap-logo.png',
       ],
       github: 'https://github.com/akshay-rajan/aura',
-      live: 'https://ulodo-zyaaa-aaaal-qjgkq-cai.icp0.io/',
+      // live: 'https://ulodo-zyaaa-aaaal-qjgkq-cai.icp0.io/',
     },
     {
       id: 2,

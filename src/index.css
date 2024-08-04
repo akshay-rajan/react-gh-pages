@@ -339,6 +339,14 @@ button:focus-visible {
   font-size: 1.5rem;
   color: #000; 
 }
+.light .nav-links a {
+  color: wheat;
+}
+.light .nav-links a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: white;
+}
 
 
 /* ! MAIN */
@@ -431,6 +439,10 @@ button:focus-visible {
 /* ! PROJECTS */
 #projects {
   background-color: 'transparent';
+}
+#projects.focused {
+  background-color: 'transparent';
+  color: white;
 }
 
 .project-wrapper {
@@ -547,6 +559,7 @@ button:focus-visible {
   background-color: wheat;
   color: black;
   margin: 10px;
+  border: 1px solid black;
 }
 .project-button:hover {
   background-color: black;
@@ -556,4 +569,8 @@ button:focus-visible {
   background-color: black;
   color: wheat;
   border: 1px solid wheat;
+}
+
+.focused .nav-links {
+  color: white!important;
 }

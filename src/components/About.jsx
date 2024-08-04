@@ -84,16 +84,26 @@ export default function About() {
       const aboutSection = document.getElementById('about');
       const body = document.body;
       const nav = document.querySelector('#home');
+      const project = document.querySelector('#projects');
       const rect = aboutSection.getBoundingClientRect();
 
-      if (rect.top < 40) {
+      if (rect.top < 100 && rect.bottom > 100) {
         body.style.backgroundColor = 'white';
         body.style.color = 'black';
         nav.classList.add('scrolled');
+        nav.classList.remove('light');
+        project.classList.remove('focused');
         aboutSection.style.paddingTop = '40px';
-      } else {
+      } else if (rect.top >= 100) {
         body.style.backgroundColor = 'transparent';
         nav.classList.remove('scrolled');
+        nav.classList.remove('light');
+        project.classList.remove('focused');
+        aboutSection.style.paddingTop = '0px';
+      } else {
+        body.style.backgroundColor = 'transparent';
+        project.classList.add('focused');
+        nav.classList.add('light');
         aboutSection.style.paddingTop = '0px';
       }
     };
