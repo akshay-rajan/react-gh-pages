@@ -38,7 +38,7 @@ export default function Header() {
                 offset={20}
                 id="projects-button"
               >
-                Projects
+                Portfolio
               </Link>
             </li>
             <li>

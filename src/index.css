@@ -467,6 +467,7 @@ button:focus-visible {
   flex: 1;
   float: left;
   display: block;
+  text-align: right;
 }
 .project-card.right {
   flex: 1;
@@ -474,6 +475,7 @@ button:focus-visible {
   height: 100%;
   float: right;
   display: block;
+  text-align: left;
 }
 
 .project-image {
@@ -527,4 +529,31 @@ button:focus-visible {
 }
 .project-stack img {
   padding: 10px;
+}
+
+.project-title {
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 20px;
+}
+.project-desc {
+  margin: 20px;
+}
+.project-btns {
+  margin: 10px;
+}
+.project-button {
+  background-color: wheat;
+  color: black;
+  margin: 10px;
+}
+.project-button:hover {
+  background-color: black;
+  color: wheat;
+}
+.project-button::after {
+  background-color: black;
+  color: wheat;
+  border: 1px solid wheat;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectImage from './ProjectImage';
+import ProjectContent from './ProjectContent';
 
 const ProjectCard = ({ project, index }) => {
   return index % 2 === 1 ? (
@@ -9,15 +10,13 @@ const ProjectCard = ({ project, index }) => {
       </div>
 
       <div className="project-card right">
-        <h4>{project.title}</h4>
-        <p>{project.description}</p>
+        <ProjectContent project={project} />
       </div>
     </div>
   ) : (
     <div className="project-card">
       <div className="project-card left">
-        <h4>{project.title}</h4>
-        <p>{project.description}</p>
+        <ProjectContent project={project} />
       </div>
 
       <div className="project-card right">

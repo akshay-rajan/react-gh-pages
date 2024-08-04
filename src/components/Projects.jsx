@@ -28,11 +28,12 @@ const Projects = () => {
       id: 2,
       title: 'DeviceDash: Smartphone Recommendation Website',
       image: devicedashimg,
-      description: 'A smartphone recommendation website in Django, designed to significantly reduce the time required for an average person to choose a smartphone by 90%. Implemented an API to fetch data from an external website by web scraping using BeautifulSoup.',
+      description: 'A smartphone recommendation website in Django, designed to significantly reduce the time required for an average person to choose a smartphone by 90%. Implemented an API to fetch data from `gsmarena.com` by web scraping using BeautifulSoup.',
       techStack: [
         'https://www.svgrepo.com/show/353657/django-icon.svg',
         'https://cdn.iconscout.com/icon/free/png-256/free-python-3521655-2945099.png?f=webp&w=256',
-      ]
+      ],
+      github: 'https://github.com/akshay-rajan/devicedash',
     },
     {
       id: 3,
@@ -44,7 +45,8 @@ const Projects = () => {
         'https://cdn.iconscout.com/icon/free/png-256/free-html-5-1-1175208.png', 
         'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/2048px-CSS3_logo.svg.png',
         'https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png',
-      ]
+      ],
+      github: 'https://github.com/akshay-rajan/timer',
     },
     {
       id: 4,
@@ -55,6 +57,7 @@ const Projects = () => {
         'https://www.svgrepo.com/show/353657/django-icon.svg',
         'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png',
       ],
+      github: 'https://github.com/akshay-rajan/commerce',
     }
   ];
 
@@ -75,7 +78,7 @@ const Projects = () => {
   return (
     <div className="project-wrapper" id="projects">
       <div className="project-header">
-        <h1 className="project-header__title">Portfolio</h1>
+        <h1 className="project-header__title">Recent Projects</h1>
       </div>
 
       <div className="project-cards" style={styles.cardContainer}>
