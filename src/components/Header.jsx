@@ -43,6 +43,17 @@ export default function Header() {
             </li>
             <li>
               <Link 
+                to="experience" 
+                smooth={true} 
+                duration={800} 
+                offset={20}
+                id="experience-button"
+              >
+                Experience
+              </Link>
+            </li>
+            <li>
+              <Link 
                 to="contact" 
                 smooth={true} 
                 duration={800} 

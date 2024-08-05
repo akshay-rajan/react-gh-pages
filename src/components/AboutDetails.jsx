@@ -14,6 +14,7 @@ export default function AboutDetails({ isExpanded, setExpanded }) {
       height: 'auto',
       background: '#000',
       borderRadius: '0 1.5rem 1.5rem 0',
+      zIndex: 2,
     };
     const smallScreen = {
       ...container,

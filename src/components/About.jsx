@@ -8,10 +8,10 @@ export default function About() {
     laptopStyle: {
       position: 'relative',
       margin: 'auto',
+      marginRight: '50px',
       width: '100%',
       maxWidth: '80rem',
       overflow: 'hidden',
-      zIndex: 1,
     },
     laptopScreenStyle: {
       display: 'flex',
@@ -86,7 +86,7 @@ export default function About() {
       const nav = document.querySelector('#home');
       const project = document.querySelector('#projects');
       const rect = aboutSection.getBoundingClientRect();
-
+      
       if (rect.top < 100 && rect.bottom > 100) {
         body.style.backgroundColor = 'white';
         body.style.color = 'black';
@@ -94,22 +94,28 @@ export default function About() {
         nav.classList.remove('light');
         project.classList.remove('focused');
         aboutSection.style.paddingTop = '40px';
+        console.log("1");
       } else if (rect.top >= 100) {
         body.style.backgroundColor = 'transparent';
         nav.classList.remove('scrolled');
         nav.classList.remove('light');
         project.classList.remove('focused');
         aboutSection.style.paddingTop = '0px';
+        console.log("2");
       } else {
         body.style.backgroundColor = 'transparent';
         project.classList.add('focused');
         nav.classList.add('light');
+        nav.classList.add('scrolled');
         aboutSection.style.paddingTop = '0px';
+        console.log("3");
       }
     };
 
     // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
+
+    handleScroll();
 
     // Cleanup on component unmount
     return () => {

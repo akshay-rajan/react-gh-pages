@@ -7,6 +7,7 @@ import Loader from './components/Loader'
 import Projects from './components/Projects'
 import Main from './components/Main'
 import Contact from './components/Contact'
+import Experience from './components/Experience'
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <Main />
           <About />
           <Projects />
+          <Experience />
           <Contact />
         </>
       )}
