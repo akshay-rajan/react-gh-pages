@@ -37,6 +37,7 @@ function App() {
           <Projects />
           <Experience />
           <Contact />
+          <div style={{color: 'wheat', zIndex: 20, fontSize: 10,}}>Last Updated: 08/2024</div>
         </>
       )}
     </>
