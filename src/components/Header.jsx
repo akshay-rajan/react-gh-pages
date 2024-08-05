@@ -3,10 +3,10 @@ import { Link, animateScroll as scroll } from 'react-scroll';
 
 export default function Header() {
   return (
-    <div className="header" id="home">
+    <div className="myheader" id="home">
       <div className="head-container">
-        <nav className="navbar">
-          <ul className="nav-links">
+        <nav className="mynavbar">
+          <ul className="navigation-links">
             <li>
               <Link 
                 to="" 

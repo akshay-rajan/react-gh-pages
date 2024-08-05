@@ -28,7 +28,7 @@ const Contact = () => {
                 </a>
               </div>
               <div>
-                <a href="">
+                <a href="https://www.google.com/maps/place/Thiruvananthapuram,+Kerala/@8.4996983,76.7593538,11z/data=!3m1!4b1!4m6!3m5!1s0x3b05bbb805bbcd47:0x15439fab5c5c81cb!8m2!3d8.5241391!4d76.9366376!16zL20vMGZrOTg?entry=ttu">
                   <HomeIcon />
                 </a>
               </div>

@@ -94,21 +94,18 @@ export default function About() {
         nav.classList.remove('light');
         project.classList.remove('focused');
         aboutSection.style.paddingTop = '40px';
-        console.log("1");
       } else if (rect.top >= 100) {
         body.style.backgroundColor = 'transparent';
         nav.classList.remove('scrolled');
         nav.classList.remove('light');
         project.classList.remove('focused');
         aboutSection.style.paddingTop = '0px';
-        console.log("2");
       } else {
         body.style.backgroundColor = 'transparent';
         project.classList.add('focused');
         nav.classList.add('light');
         nav.classList.add('scrolled');
         aboutSection.style.paddingTop = '0px';
-        console.log("3");
       }
     };
 

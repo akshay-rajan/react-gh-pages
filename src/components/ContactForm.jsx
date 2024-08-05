@@ -10,9 +10,12 @@ export default function ContactForm() {
   useEffect(() => {
     const form = formRef.current;
     const alert = alertRef.current;
+    const submitBtn = form.querySelector('#send-msg');
 
     const handleSubmit = (e) => {
       e.preventDefault();
+      submitBtn.disabled = true;
+      console.log(submitBtn);
       fetch(scriptURL, { method: 'POST', body: new FormData(form) })
         .then(response => {
           alert.innerHTML = 'Message Sent Successfully!';
@@ -20,6 +23,7 @@ export default function ContactForm() {
             alert.innerHTML = '';
           }, 5000);
           form.reset();
+          submitBtn.disabled = false;
         })
         .catch(error => console.error('Error!', error.message));
     };
@@ -34,16 +38,21 @@ export default function ContactForm() {
 
   return (
     <div className="contact-form">
-      <form ref={formRef} action={scriptURL} method="POST">
-        <label htmlFor="name">Name</label>
-        <input type="text" id="name" name="name" required />
-        <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="email" required />
-        <label htmlFor="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit">Send Message</button>
+      <form ref={formRef} action={scriptURL} method="POST" className="contact-form-f">
+        <div className="form-group">
+          <input type="text" id="name" name="name" placeholder="Name" className="form-control" required />
+        </div>
+        <div className="form-group">
+          <input type="email" id="email" name="email" required placeholder="Email" className="form-control" />
+        </div>
+        <div className="form-group">
+          <textarea id="message" name="message" required placeholder="Enter your message" className="form-control"></textarea>
+        </div>
+        <div className="form-group">
+          <button type="submit" className="btn btn-dark" id="send-msg">Send Message</button>
+        </div>
+        <div id="alert" ref={alertRef}></div>
       </form>
-      <div id="alert" ref={alertRef}></div>
     </div>
   );
 }
