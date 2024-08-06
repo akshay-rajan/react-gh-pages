@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import dp from "../assets/dp_cartoon.jpeg";
 import { Tooltip } from "@nextui-org/tooltip";
-import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 
 export default function AboutProfile() {
   const flexLeft = {

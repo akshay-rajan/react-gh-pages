@@ -702,7 +702,7 @@ button:focus-visible {
 
 /* ! CONTACT */
 
-#contact {
+.contact-container {
   color: white;
   text-align: right;
   margin: 5em;

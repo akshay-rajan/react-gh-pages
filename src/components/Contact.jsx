@@ -9,6 +9,7 @@ const Contact = () => {
 
   return (
     <div className="contact" id="contact">
+      <div className="mylinks"></div>
       <div className="contact-container">
         <div className="contact-title">Contact Me</div>
         <div className="contact-row">
