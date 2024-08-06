@@ -8,6 +8,7 @@ import Projects from './components/Projects'
 import Main from './components/Main'
 import Contact from './components/Contact'
 import Experience from './components/Experience'
+import BackgroundAnimation from './components/BackgroundAnimation'
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
     <>
       {loading ? <Loader /> : (
         <>
+          <BackgroundAnimation />
           <Header />
           <Main />
           <About />

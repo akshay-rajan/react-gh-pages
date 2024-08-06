@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
-import { Home, Info, Engineering, Work } from '@mui/icons-material';
+import { Home, Info, Engineering, Work, Message } from '@mui/icons-material';
 
 export default function Header() {
 
@@ -90,7 +90,7 @@ export default function Header() {
             id="home-button"
             onClick={() => { scroll.scrollToTop(); toggleNavbar(); }}
           >
-            dhfuisdh
+            <Home />
           </Link>
           <Link 
             to="about" 
@@ -100,7 +100,7 @@ export default function Header() {
             id="about-button"
             onClick={toggleNavbar}
           >
-            About
+            <Info />
           </Link>
           <Link 
             to="projects" 
@@ -110,7 +110,7 @@ export default function Header() {
             id="projects-button"
             onClick={toggleNavbar}
           >
-            Portfolio
+            <Engineering />
           </Link>
           <Link 
             to="experience" 
@@ -120,7 +120,7 @@ export default function Header() {
             id="experience-button"
             onClick={toggleNavbar}
           >
-            Experience
+            <Work />
           </Link>
           <Link 
             to="contact" 
@@ -130,7 +130,7 @@ export default function Header() {
             id="contact-button"
             onClick={toggleNavbar}
           >
-            Contact
+            <Message />
           </Link>
         </div> */}
       </div>

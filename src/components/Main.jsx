@@ -3,9 +3,6 @@ import BackgroundAnimation from './BackgroundAnimation';
 
 const Main = () => (
   <div className="main" id="home">
-    {/* <div className="bg">
-      <BackgroundAnimation />
-    </div> */}
     <div className="content first quarter">
       <div className="name-container">
         <div className="name-intro"></div>
