@@ -19,6 +19,8 @@ body {
   background-color: black;
   color: white;
   transition: background-color 1s;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* ! ABOUT */
@@ -34,7 +36,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -257,29 +258,49 @@ button:focus-visible {
   color: wheat;
 }
 
-#hamburger {
-  border: none;
-  color: white;
-  font-size: 24px;
+.mobile-navbar {
   display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 1;
 }
 
-@media (max-width: 768px) {
-  .navigation-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
+.mobile-navbar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
 
-  .navigation-links.active {
-    text-decoration: underline;
-    display: flex;
-  }
+.mobile-navbar a:hover {
+  color: #f1f1f1;
+}
 
-  #hamburger {
-    display: block;
-  }
+.mobile-navbar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.hamburger-icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 3;
 }
 
 /* <<<<<<<<<<<<<<<Nav to Right>>>>>>>>>>>>>> */
@@ -353,6 +374,30 @@ button:focus-visible {
   text-decoration: none;
 }
 
+@media screen and (max-width: 600px) {
+  .myheader {
+    display: none;
+  }
+  .mynavbar {
+    display: none;
+  }
+  .hamburger-icon {
+    display: block;
+  }
+  .navigation-links {
+    z-index: 100;
+    position: fixed;
+    /* display: none; */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navigation-links.active {
+    text-decoration: underline;
+    display: flex;
+  }
+}
 
 /* ! MAIN */
 #home {
@@ -438,6 +483,28 @@ button:focus-visible {
       width: 40px;
       margin-left: 6px;
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #home {
+    height: 90vh;
+  }
+  .marquee {
+    display: block;
+    transform: rotate(270deg);
+    flex-direction: column;
+    height: 100vh;
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+  }
+  .marquee span {
+    font-size: 100px;
+    height: 30vh;
+    padding: 20px;
+    margin-top: 20px;
   }
 }
 
