@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
+
 :root {
   font-family: Consolas, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -347,7 +349,7 @@ button:focus-visible {
   color: wheat;
 }
 .light .navigation-links a:hover {
-  color: white;
+  color: tan;
   text-decoration: none;
 }
 
@@ -580,8 +582,6 @@ button:focus-visible {
 
 /* ! EXPERIENCE */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
-
 :root {
   --exp-color-1: white;
   --exp-color-2: white;
@@ -611,7 +611,12 @@ button:focus-visible {
   text-align: left;
   line-height: 1.1;
 }
-
+.xtra {
+  display: inline-block;
+  font-size: small;
+  font-weight: 100;
+  padding-left: 10px;
+}
 .exp-timeline {
   margin: 4em auto;
   position: relative;
@@ -730,6 +735,10 @@ button:focus-visible {
 }
 .contact-info a {
   color: wheat;
+  text-decoration: none;
+}
+.contact-info a:hover {
+  color: tan;
   text-decoration: none;
 }
 .contact-form {

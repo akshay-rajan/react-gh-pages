@@ -29,15 +29,26 @@ export default function Experience(props) {
             <h3 className="job-title">Software Engineer Intern</h3>
             <h4>
               XTG Technologies, Kochi, Kerala 
-              (Remote)
+              <div className="xtra">
+                (Remote)
+              </div>
             </h4>
             <p>
               <strong>Smart Contracts: Internet Computer</strong><br/>
-              Entwickeln von anspruchsvollen, animierten, responsive und adaptive Webseiten mit HTML5, SCSS, jQuery; für alle Browser, optimiert für Desktop, Notebook, Smartphones und Tablets (iOS, Android, Windows).
+              <ul>
+                <li>Developed 100% on-chain decentralized applications on the Internet Computer blockchain using Motoko and React.</li>
+                <li>Designed scalable smart contracts and integrated them with Internet Identity, an on-chain authenticaiton service.</li>
+                <li>Implemented the front-ends using React.</li>
+              </ul>
+
             </p>
             <p>
               <strong>Smart Contracts: Solana</strong><br/>
-              Ständiges Verbessern des agilen Entwicklungsprozesses beispielsweise durch Grunt, Yeoman, GIT, JIRA und BrowserStack.
+              <ul>
+                <li>Collaborated with team members to develop an application on the Solana blockchain.</li>
+                <li>Used the Rust programming language along with the Anchor framework for the backend development.</li>
+                <li>Wrote test-scripts in TypeScript.</li>
+              </ul>
             </p>
           </div>
         </li>
