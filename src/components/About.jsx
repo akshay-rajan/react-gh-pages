@@ -87,7 +87,7 @@ export default function About() {
     const handleScroll = () => {
       const aboutSection = document.getElementById('about');
       const body = document.body;
-      const nav = document.querySelector('#home');
+      const nav = document.querySelector('#nav');
       const project = document.querySelector('#projects');
       const rect = aboutSection.getBoundingClientRect();
       

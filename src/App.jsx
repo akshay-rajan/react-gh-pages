@@ -28,7 +28,7 @@ function App() {
     }, 2500);
   });
 
-  console.log(window.innerWidth);
+  console.log("Width: " + window.innerWidth);
 
   return (
     <>

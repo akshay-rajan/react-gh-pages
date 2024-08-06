@@ -12,7 +12,7 @@ export default function Header() {
   };
 
   return (
-    <div className="myheader">
+    <div className="myheader" id="nav">
 
       <div className="head-container">
         <nav className="mynavbar" style={window.innerWidth < 798 ? {display: 'none'} : {}}>

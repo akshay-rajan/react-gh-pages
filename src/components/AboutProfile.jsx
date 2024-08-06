@@ -37,6 +37,7 @@ export default function AboutProfile() {
       textAlign: 'left',
       maxWidth: '100%',
       height: 'auto',
+      color: 'white',
       aspectRatio: 'attr(width) / attr(height)',
       background: '#000',
       borderRadius: '0 1.5rem 1.5rem 0',
