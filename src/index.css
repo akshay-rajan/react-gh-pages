@@ -16,7 +16,7 @@
 }
 
 body {
-  display: flex;
+  /* display: flex; */
   color: white;
   background-color: black;
   transition: background-color 1s;
