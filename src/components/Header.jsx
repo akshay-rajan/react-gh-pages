@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
+import { Home, Info, Engineering, Work } from '@mui/icons-material';
+
 export default function Header() {
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <div className="myheader" id="home">
+    <div className="myheader">
 
       <div className="head-container">
-        <nav className="mynavbar">
+        <nav className="mynavbar" style={window.innerWidth < 798 ? {display: 'none'} : {}}>
           <ul className="navigation-links">
             <li>
               <Link 
@@ -78,7 +80,7 @@ export default function Header() {
           <i className="fa fa-bars"></i>
         </span>
 
-        <div className={`mobile-navbar ${isOpen ? 'open' : ''}`}>
+        {/* <div className={`mobile-navbar ${isOpen ? 'open' : ''}`} style={window.innerWidth < 798 && {display: 'block'}}>
           <span className="closebtn" onClick={toggleNavbar}>&times;</span>
           <Link 
             to="" 
@@ -88,7 +90,7 @@ export default function Header() {
             id="home-button"
             onClick={() => { scroll.scrollToTop(); toggleNavbar(); }}
           >
-            Home
+            dhfuisdh
           </Link>
           <Link 
             to="about" 
@@ -130,7 +132,7 @@ export default function Header() {
           >
             Contact
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );
