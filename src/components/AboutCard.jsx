@@ -1,5 +1,7 @@
 import React from "react";
 
+import CircleIcon from '@mui/icons-material/Circle';
+
 
 export default function AboutCard(props) {
   const container = {
@@ -44,6 +46,7 @@ export default function AboutCard(props) {
     font: `monospace`,
     color: 'white',
     fontSize: '15px',
+    margin: '2px',
     marginTop: '5px',
     opacity: '0.8',
   }
@@ -65,6 +68,15 @@ export default function AboutCard(props) {
     marginBottom: '5px',
   };
 
+  const getRandomColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
   return (
     <>
       <div 
@@ -80,7 +92,18 @@ export default function AboutCard(props) {
         </div>
         <div style={points}>
           {props.points.map((point, index) => (
-            <li style={item} key={index}>⚫ {point} </li>
+            <li style={item} key={index}>
+              <CircleIcon style={{
+                display: 'inline-flex', 
+                width: '16px', 
+                verticalAlign: 'middle', 
+                boxSizing: 'inherit', 
+                alignItems: 'center',
+                color: getRandomColor(),
+                opacity: '0.6',
+              }}/>
+              {point} 
+            </li>
           ))}
         </div>
       </div>
