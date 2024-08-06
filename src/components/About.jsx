@@ -44,14 +44,18 @@ export default function About() {
   const smallScreen = {
     ...styles,
     laptopStyle: {
-      ...styles.laptopStyle,
-      width: '100%',
+      position: 'relative',
+      maxWidth: '80rem',
+      overflow: 'hidden',
+      width: 'auto',
+      margin: 0,
     },
     laptopScreenStyle: {
       ...styles.laptopScreenStyle,
       flexDirection: 'column',
+      width: 'auto',
       padding: '8px',
-      minHeight: '100vh',      
+      minHeight: '90vh',
     },
   };
 

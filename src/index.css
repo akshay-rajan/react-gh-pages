@@ -28,21 +28,6 @@ body {
   min-height: 100vh;
 }
 
-/* ! LOADER */
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* ! ABOUT */
-
 a {
   font-weight: 500;
   color: #646cff;
@@ -87,6 +72,26 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* ! LOADER */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ! ABOUT */
+
+#about {
+  margin: 0;
+  padding: 0;
 }
 
 /* Achievements */
