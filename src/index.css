@@ -16,11 +16,16 @@
 }
 
 body {
-  background-color: black;
+  display: flex;
   color: white;
+  background-color: black;
   transition: background-color 1s;
   max-width: 100%;
   overflow-x: hidden;
+  margin: 0;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
 /* ! ABOUT */
@@ -32,13 +37,6 @@ a {
 }
 a:hover {
   color: #535bf2;
-}
-
-body {
-  margin: 0;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -374,7 +372,7 @@ button:focus-visible {
   text-decoration: none;
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 798px) {
   .myheader {
     display: none;
   }
@@ -387,7 +385,7 @@ button:focus-visible {
   .navigation-links {
     z-index: 100;
     position: fixed;
-    /* display: none; */
+    display: none;
     flex-direction: column;
     width: 100%;
     text-align: center;
@@ -397,13 +395,17 @@ button:focus-visible {
     text-decoration: underline;
     display: flex;
   }
-}
+} */
 
 /* ! MAIN */
 #home {
   margin: 0;
   padding: 0;
 }
+/* .bg {
+  display: block;
+  position: absolute;
+} */
 .background-animation {
   position: fixed;
   top: 0;
@@ -486,25 +488,23 @@ button:focus-visible {
   }
 }
 
-@media screen and (max-width: 600px) {
-  #home {
-    height: 90vh;
+@media screen and (max-width: 798px) {
+  
+  .name-container {
+    width: 85vw;
+    display: flex;
+    height: 50vh;
   }
   .marquee {
-    display: block;
+    text-align: top;
     transform: rotate(270deg);
     flex-direction: column;
-    height: 100vh;
-    width: auto;
-    margin: 0;
-    padding: 0;
-
+    margin: 0px;
+    padding: 0px;
   }
   .marquee span {
-    font-size: 100px;
-    height: 30vh;
-    padding: 20px;
-    margin-top: 20px;
+    color: white;
+    height: 400px;
   }
 }
 

@@ -27,6 +27,8 @@ function App() {
     }, 2500);
   });
 
+  console.log(window.innerWidth);
+
   return (
     <>
       {loading ? <Loader /> : (
