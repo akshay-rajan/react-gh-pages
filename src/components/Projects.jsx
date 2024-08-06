@@ -13,6 +13,7 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      key: 1,
       title: 'Aura: A Crypto Token',
       image: auraproject,
       description: 'A fungible crypto token deployed on the Internet Computer blockchain. The ledger smart contract is built using Motoko, and React is used for an interactive user interface. Implemented authentication by integrating with Internet Identity, a native authentication technology which uses passkeys.',
@@ -26,6 +27,7 @@ const Projects = () => {
     },
     {
       id: 2,
+      key: 2,
       title: 'DeviceDash: Smartphone Recommendation Website',
       image: devicedashimg,
       description: 'A smartphone recommendation website in Django, designed to significantly reduce the time required for an average person to choose a smartphone by 90%. Implemented an API to fetch data from `gsmarena.com` by web scraping using BeautifulSoup.',
@@ -37,6 +39,7 @@ const Projects = () => {
     },
     {
       id: 3,
+      key: 3,
       title: 'Timer for Chrome',
       image: timerforchrome,
       description: 'A Timer chrome extension using JavaScript, designed to track time during browsing or tests, boosting focus and time management of an individual by 50%. Enhanced proficiency in DOM manipulation, event handling and asynchronous operations. Studied Chrome extension architecture, including background scripts, content scripts, and popup pages.',
@@ -50,6 +53,7 @@ const Projects = () => {
     },
     {
       id: 4,
+      key: 4,
       title: 'Auctions',
       image: auctions,
       description: 'An online auction website in Django and Bootstrap, designed to facilitate the buying and selling of products. Implemented a bidding system, user authentication, and a user-friendly interface.',
@@ -84,9 +88,8 @@ const Projects = () => {
       <div className="project-cards" style={styles.cardContainer}>
         {projects.map((project) => {
           return (
-          <div>
+          <div key={project.key}>
             <ProjectCard
-              key={project.id}
               index={project.id}
               project={project}
               isActive={activeProject === project.id}
