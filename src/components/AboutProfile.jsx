@@ -93,13 +93,18 @@ export default function AboutProfile() {
   const smallScreen = {
     ...flexLeft,
     dp: {
-      width: '150px',
+      width: '100px',
       borderRadius: '50%',
       border: '1px solid wheat',
+    },
+    imgContainer: {
+      margin: 0,
     },
     container: {
       ...flexLeft.container,
       display: 'flex',
+      margin: '2px',
+      padding: '10px',
       borderRadius: '1.5rem 1.5rem 0 0',
     },
     details: {

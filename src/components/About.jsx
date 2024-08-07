@@ -47,14 +47,14 @@ export default function About() {
       position: 'relative',
       maxWidth: '80rem',
       overflow: 'hidden',
-      width: 'auto',
-      margin: 0,
+      width: '100%',
     },
     laptopScreenStyle: {
       ...styles.laptopScreenStyle,
       flexDirection: 'column',
       width: 'auto',
-      padding: '8px',
+      margin: '0',
+      padding: '4px',
       minHeight: '90vh',
     },
   };
