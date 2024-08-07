@@ -21,7 +21,7 @@ body {
   transition: background-color 1s;
   max-width: 100%;
   overflow-x: hidden;
-  margin: 0;
+  margin: 0!important;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -837,6 +837,7 @@ button:focus-visible {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  /* overflow: hidden; */
   padding: 0;
   text-align: right;
 }
@@ -849,9 +850,10 @@ button:focus-visible {
   color: white;
 }
 .contact-form-f input, .contact-form-f textarea {
-  width: 100%;
+  width: 90%;
   padding: 10px;
   border: 1px solid white;
+  border-radius: 5px;
   background-color: transparent;
   color: white;
 }
