@@ -21,7 +21,7 @@ export default function ContactForm() {
           setTimeout(() => {
             alert.innerHTML = '';
           }, 5000);
-          // form.reset();
+          form.reset();
           submitBtn.disabled = false;
         })
         .catch(error => console.error('Error!', error.message));
