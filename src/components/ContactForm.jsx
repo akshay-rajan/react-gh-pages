@@ -11,18 +11,17 @@ export default function ContactForm() {
     const form = formRef.current;
     const alert = alertRef.current;
     const submitBtn = form.querySelector('#send-msg');
-
+    
     const handleSubmit = (e) => {
       e.preventDefault();
       submitBtn.disabled = true;
-      console.log(submitBtn);
       fetch(scriptURL, { method: 'POST', body: new FormData(form) })
         .then(response => {
           alert.innerHTML = 'Message Sent Successfully!';
           setTimeout(() => {
             alert.innerHTML = '';
           }, 5000);
-          form.reset();
+          // form.reset();
           submitBtn.disabled = false;
         })
         .catch(error => console.error('Error!', error.message));
@@ -38,7 +37,7 @@ export default function ContactForm() {
 
   return (
     <div className="contact-form">
-      <form ref={formRef} action={scriptURL} method="POST" className="contact-form-f">
+      <form ref={formRef} action={scriptURL} method="POST" className="contact-form-f" name="submit-to-google-sheet">
         <div className="form-group">
           <input type="text" id="name" name="name" placeholder="Name" className="form-control" required />
         </div>
