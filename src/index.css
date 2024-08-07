@@ -7,7 +7,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: black;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,7 +16,6 @@
 }
 
 body {
-  /* display: flex; */
   color: white;
   background-color: black;
   transition: background-color 1s;
@@ -59,6 +58,18 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.background-animation {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
 }
 
 @media (prefers-color-scheme: light) {
@@ -424,16 +435,6 @@ button:focus-visible {
   display: block;
   position: absolute;
 } */
-.background-animation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  z-index: -1;
-}
 .content {
   position: relative;
   z-index: 1;
@@ -797,7 +798,7 @@ button:focus-visible {
   flex: 1;
   color: white;
   text-align: right;
-  margin: 5em;
+  margin-right: 3vw;
   padding: 20px;
   min-height: 70vh;
   font-size: 1em;
@@ -806,7 +807,6 @@ button:focus-visible {
   font-size: 1em;
   font-weight: 300;
   line-height: 1.5;
-  letter-spacing: 0.05em;
 }
 .contact-title {
   font-size: 2.5em;
@@ -841,7 +841,7 @@ button:focus-visible {
   text-align: right;
 }
 .contact-form-f {
-  width: 500px;
+  width: 40vw;
   margin-top: 20px;
 }
 .contact-form-f div {
@@ -915,4 +915,40 @@ button:focus-visible {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 798px) {
+  .contact-container {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .contact-info {
+    justify-content: center;
+    text-align: center;
+  }
+  .contact-form {
+    justify-content: center;
+    text-align: center;
+  }
+  .contact-form-f {
+    width: 80vw;
+  }
+  .contact-form-f input, .contact-form-f textarea {
+    width: 100%;
+  }
+  .contact-form-f button {
+    width: 100%;
+  }
+  .icon img {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+  }
+  .link-container {
+    width: 100%;
+  }
+  .mylinks {
+    width: 100%;
+  }
+  
 }
