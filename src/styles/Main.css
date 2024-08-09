@@ -82,17 +82,18 @@
 
 .name-intro.imgDiv {
   display: none; /* ! */
-  /* display: block; */
-  position: absolute;
+  display: block;
+  position: fixed;
   width: 100vw;
   margin: 0;
   padding: 0;
-  z-index: 20;
+  z-index: 2;
   opacity: 1;
   overflow: hidden;
+  opacity: 0.999;
 }
 .main-img {
-  width: 80vw;
+  height: 90vh;
 }
 
 @media screen and (max-width: 798px) {
@@ -115,7 +116,7 @@
     height: 400px;
   }
   .name-intro.imgDiv {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     margin: 0;
     padding: 0;
@@ -124,7 +125,8 @@
     overflow: hidden;
   }
   .main-img {
-    width: 170vw;
+    width: 100vw;
+    margin-top: 35px;
     left: 0;
     height: auto;
   }

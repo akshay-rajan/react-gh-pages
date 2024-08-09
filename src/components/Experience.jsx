@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 
+import "../styles/Experience.css";
+
 export default function Experience(props) {
   useEffect(() => {
     const exp = document.querySelector("#experience");

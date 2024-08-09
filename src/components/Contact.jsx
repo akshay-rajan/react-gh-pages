@@ -1,5 +1,6 @@
 import React from 'react';
 
+import "../styles/Contact.css";
 
 import ContactForm from './ContactForm';
 import EmailIcon from '@mui/icons-material/Email';
