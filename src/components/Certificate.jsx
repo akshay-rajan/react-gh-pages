@@ -6,13 +6,13 @@ export default function Certificate({ certification, index }) {
     <div className="card">
       <div className="card__side card__side--front-1">
         <div className="certification-card" key={index}><div>
-          <div style={window.innerWidth < 798 ? {color: "black", fontSize: "14px"} : {color: "black", fontSize: "16px"}} className="card-content">
+          <div style={window.innerWidth < 798 ? {fontSize: "12px"} : {fontSize: "16px"}} className="card-content">
             {certification.certification}
           </div>
-          <div className="card-content" style={{color: "grey"}}>
+          <div className="card-content" style={{fontSize: '12px', color: "grey"}}>
             {certification.year}
           </div>
-          <div style={{color: "grey"}}>
+          <div style={window.innerWidth < 798 ? {fontSize: '10px', color: "grey"} : {fontSize: '12px', color: "grey"}}>
             {certification.institution}
           </div>
           </div>

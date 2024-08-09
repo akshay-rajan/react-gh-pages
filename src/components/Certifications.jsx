@@ -25,7 +25,14 @@ export default function Certifications(props) {
     textAlign: 'left',
     fontWeight: 'bold',
   };
-  const certificates = {
+  const certificates = window.innerWidth < 798 ? {
+    display: 'flex',
+    flexWrap: 'wrap',
+    margin: '4px',
+    padding: '0',
+    paddingTop: '10px',
+
+  } : {
     display: 'flex',
     flexWrap: 'wrap',
     margin: '10px',
