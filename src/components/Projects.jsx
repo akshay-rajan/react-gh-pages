@@ -69,9 +69,17 @@ const Projects = () => {
     setActiveProject(activeProject === id ? null : id);
   };
 
-  const styles = {
+  const styles = window.innerWidth < 798 ? {
     cardContainer: {
       display: 'block',
+      width: '100%',
+      height: 'auto',
+      zIndex: '1',
+    }
+  } : {
+    cardContainer: {
+      display: 'flex',
+      flexWrap: 'wrap',
       width: '100%',
       height: 'auto',
       zIndex: '1',

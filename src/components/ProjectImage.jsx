@@ -10,6 +10,7 @@ export default function ProjectImage({ project }) {
   const cardCometRef = useRef(null);
 
   useEffect(() => {
+    if (window.innerWidth < 798) return;
     const generateTranslate = (el, e, value) => {
       if (el && el.current) {
         el.current.style.transform = `translate(${e.clientX * value}px, ${e.clientY * value}px)`;
@@ -61,6 +62,14 @@ export default function ProjectImage({ project }) {
     };
   }, []);
 
+  const stackStyle = window.innerWidth < 798 ? {
+    maxWidth: '30px', 
+    maxHeight: '30px',
+  } : {
+    maxWidth: '50px', 
+    maxHeight: '50px',
+  };
+
   return (
     <div className="wrapper">
       <div className="project-card" ref={cardRef}>
@@ -68,7 +77,7 @@ export default function ProjectImage({ project }) {
         <div className="card__thankyou" ref={cardThankYouRef}>
           <div className="project-stack">
             {project.techStack.map((url, index) => (
-              <img key={index} src={url} alt={ url } style={{maxWidth: '50px', maxHeight: '50px',}} />
+              <img key={index} src={url} alt={ url } style={stackStyle} />
             ))}
           </div>
         </div>

@@ -46,7 +46,7 @@ export default function Experience(props) {
               <ul>
                 <li>Collaborated with team members to develop an application on the Solana blockchain.</li>
                 <li>Used the Rust programming language along with the Anchor framework for the backend development.</li>
-                <li>Wrote test-scripts in TypeScript.</li>
+                <li>Wrote programs in TypeScript for testing Solana programs.</li>
               </ul>
             </div>
           </div>

@@ -3,8 +3,8 @@ import ProjectImage from './ProjectImage';
 import ProjectContent from './ProjectContent';
 
 const ProjectCard = ({ project, index }) => {
-  return index % 2 === 1 ? (
-    <div className="project-card">
+  return (index % 2 === 1 || window.innerWidth < 798) ? (
+    <div className="project-cards">
       <div className="project-card left">
         <ProjectImage project={project} />
       </div>
@@ -14,7 +14,7 @@ const ProjectCard = ({ project, index }) => {
       </div>
     </div>
   ) : (
-    <div className="project-card">
+    <div className="project-cards">
       <div className="project-card left">
         <ProjectContent project={project} />
       </div>

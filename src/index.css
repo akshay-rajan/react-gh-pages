@@ -601,6 +601,7 @@ button:focus-visible {
 
 .project-image {
   width: 500px;
+  pointer-events: none;
   height: auto;
 }
 
@@ -682,6 +683,30 @@ button:focus-visible {
 
 .focused .navigation-links {
   color: white!important;
+}
+
+@media screen and (max-width: 798px) {
+  .project-cards {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .wrapper img {
+    width: 100%;
+  }
+  .card__thankyou {
+    left: 0;
+    position: inherit;
+  }
+  .project-header__title {
+    margin: 0;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-size: 2.5em;
+    text-align: left;
+    font-weight: 500;
+    line-height: 1.1;
+  }
 }
 
 /* ! EXPERIENCE */
@@ -1065,13 +1090,13 @@ button:focus-visible {
     text-align: center;
   }
   .contact-form-f {
-    width: 80vw;
+    width: 90vw;
   }
   .contact-form-f input, .contact-form-f textarea {
-    width: 100%;
+    width: 90%;
   }
   .contact-form-f button {
-    width: 100%;
+    width: 95%;
   }
   .icon img {
     width: 30px;
