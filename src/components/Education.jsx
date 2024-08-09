@@ -40,13 +40,6 @@ export default function Education(props) {
     float: 'right',
     marginRight: '0',
   };
-  const closeButton = {
-    position: 'absolute',
-    top: '20',
-    left: '90%',
-    color: 'white',
-    cursor: 'pointer',
-  };
 
   const [currentEdu, setCurrentEdu] = useState(-1);
 
@@ -54,12 +47,8 @@ export default function Education(props) {
     <>
       <div style={container}>
         <div style={title} onMouseEnter={() => props.setExpanded(false)}>
-          <div>
-            Education 
-          </div>
-          <div style={closeButton}>
-            <CloseIcon />
-          </div>
+          <div>Education</div>
+          <div className="close-btn"><CloseIcon /></div>
         </div>
         <div style={eduData}>
           <EduBlock content={props.content[0]} setCurrentEdu={setCurrentEdu} index={{index: 0}} />

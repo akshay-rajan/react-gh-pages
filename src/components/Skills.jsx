@@ -34,13 +34,6 @@ export default function Skills(props) {
     borderRadius: '10px',
     // backgroundColor: '#242424',
   };
-  const closeButton = {
-    position: 'absolute',
-    top: '20',
-    left: '90%',
-    color: 'white',
-    cursor: 'pointer',
-  };
   const pieInfo = {
     flex: 5,
     width: '100%',
@@ -97,12 +90,8 @@ export default function Skills(props) {
     <>
       <div style={container}>
         <div style={title} onMouseEnter={() => props.setExpanded(false)}>
-          <div>
-            Skills
-          </div>
-          <div style={closeButton}>
-            <CloseIcon />
-          </div>
+          <div>Skills</div>
+          <div className="close-btn"><CloseIcon /></div>
         </div>
         <div style={window.innerWidth < 798 ? small.skillData : skillData}>
 

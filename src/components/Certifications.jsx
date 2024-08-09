@@ -89,7 +89,7 @@ export default function Certifications(props) {
       <div style={container}>
         <div style={title} onMouseEnter={() => props.setExpanded(false)}>
           <div>Certifications</div>
-          <div style={closeButton}><CloseIcon /></div>
+          <div className="close-btn"><CloseIcon /></div>
         </div>
           <div style={certificates}>
             {certifications.content.map((certification, index) => 

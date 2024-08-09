@@ -24,24 +24,14 @@ export default function Achievements(props) {
     textAlign: 'left',
     fontWeight: 'bold',
   };
-  const closeButton = {
-    position: 'absolute',
-    top: '20',
-    left: '90%',
-    color: 'white',
-    cursor: 'pointer',
-  };
-
   const logo = [badge1, badge2, badge3];
     
   return (
     <>
       <div style={container}>
         <div style={title} onMouseEnter={() => props.setExpanded(false)}>
-          Achievements
-          <div style={closeButton}>
-            <CloseIcon />
-          </div>
+          <div>Achievements</div>
+          <div className="close-btn"><CloseIcon /></div>
         </div>
           <div className="achievements-list">
             {props.content.map((achievement, index) => {

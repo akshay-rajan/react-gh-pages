@@ -3,6 +3,27 @@
   padding: 0;
 }
 
+.close-btn {
+  position: absolute;
+  top: 20;
+  left: 90%;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 798px) {
+  .close-btn {
+    position: absolute;
+    top: 20;
+    left: 80%;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+/* Education */
+
+
 /* Achievements */
 
 .achievements-list {
@@ -95,7 +116,7 @@
           box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 .card__side--front-1 {
-  background-image:  url(./assets/certificate_bg.png);
+  background-image:  url(../assets/certificate_bg.png);
   background-size: cover;
   display: flex;
   flex-wrap: wrap;
