@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+
+import "../styles/About.css";
+
 import AboutDetails from "./AboutDetails";
 import AboutProfile from "./AboutProfile";
 
