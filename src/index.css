@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
 
 :root {
-  font-family: Consolas, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -282,6 +282,12 @@ button:focus-visible {
   cursor: pointer;
 }
 
+.navigation-links li .help {
+  display: inline-flex;
+  font-size: 14px;
+  margin: 5px;
+}
+
 .navigation-links a {
   color: white;
   text-decoration: none;
@@ -292,7 +298,7 @@ button:focus-visible {
   color: wheat;
 }
 
-.mobile-navbar {
+/* .mobile-navbar {
   display: none;
   position: fixed;
   top: 0;
@@ -335,7 +341,7 @@ button:focus-visible {
   top: 15px;
   right: 20px;
   z-index: 3;
-}
+} */
 
 /* <<<<<<<<<<<<<<<Nav to Right>>>>>>>>>>>>>> */
 
@@ -361,6 +367,7 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 10px;
 }
 
 .scrolled .navigation-links {
@@ -376,18 +383,19 @@ button:focus-visible {
   margin: 30px 0 30px 0;
 }
 
+.scrolled .navigation-links li .help {
+  display: none;
+}
+
 .scrolled .navigation-links a {
-  transform: rotate(90deg);
+  /* transform: rotate(90deg); */
   display: inline-block;
   text-decoration: none;
   color: #000;
   font-size: 1.2rem;
 }
 .scrolled .navigation-links a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  text-decoration-style: solid;
-  text-decoration-color: wheat;
+  color: tan;
 }
 .scrolled #hamburger {
   margin-top: 1rem;
@@ -447,6 +455,7 @@ button:focus-visible {
   z-index: 1;
 }
 .marquee {
+  font-family:'Times New Roman', Times, serif;
   margin: 0 auto;
   white-space: nowrap;
   overflow: hidden;

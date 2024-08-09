@@ -6,9 +6,11 @@ import AboutProfile from "./AboutProfile";
 export default function About() {
   const styles = {
     laptopStyle: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
       position: 'relative',
       margin: 'auto',
-      marginRight: '50px',
       width: '100%',
       maxWidth: '80rem',
       overflow: 'hidden',

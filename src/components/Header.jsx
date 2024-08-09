@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
-import { Home, Info, Engineering, Work, Message } from '@mui/icons-material';
+import { Home, Info, Engineering, Work, Contacts } from '@mui/icons-material';
 
 export default function Header() {
 
@@ -26,7 +26,8 @@ export default function Header() {
                 id="home-button"
                 onClick={() => scroll.scrollToTop()}
               >
-                Home
+                <Home style={{verticalAlign: 'sub'}} />
+                <div className="help">Home</div>
               </Link>
             </li>
             <li>
@@ -37,7 +38,8 @@ export default function Header() {
                 offset={10}
                 id="about-button"
               >
-                About
+                <Info style={{verticalAlign: 'sub'}} />
+                <div className="help">About Me</div>
               </Link>
             </li>
             <li>
@@ -48,7 +50,8 @@ export default function Header() {
                 offset={20}
                 id="projects-button"
               >
-                Portfolio
+                <Engineering style={{verticalAlign: 'sub'}} />
+                <div className="help">Projects</div>
               </Link>
             </li>
             <li>
@@ -59,7 +62,8 @@ export default function Header() {
                 offset={20}
                 id="experience-button"
               >
-                Experience
+                <Work style={{verticalAlign: 'sub'}} />
+                <div className="help">Experience</div>
               </Link>
             </li>
             <li>
@@ -70,7 +74,8 @@ export default function Header() {
                 offset={20}
                 id="contact-button"
               >
-                Contact
+                <Contacts style={{verticalAlign: 'sub'}} />
+                <div className="help">Contact Me</div>
               </Link>
             </li>
           </ul>
