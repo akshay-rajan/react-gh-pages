@@ -1,4 +1,7 @@
 import React from 'react';
+
+import "../styles/Loader.css";
+
 import loaderImage from '../assets/loader.gif';
 
 const Loader = () => (
