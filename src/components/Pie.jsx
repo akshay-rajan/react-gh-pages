@@ -4,11 +4,6 @@ import { PieChart, pieArcLabelClasses } from "@mui/x-charts";
 
 export default function Pie({ setInfo }) {
 
-  const pieDiv = {
-    flex: 6,
-    width: '100%',
-  };
-
   const data = [
     { 
       id: 0, 
@@ -73,7 +68,7 @@ export default function Pie({ setInfo }) {
   ];
   
   return (
-    <div style={window.innerWidth < 798 ? {display: 'flex', justifyContent: 'center' , alignItems: 'center'} : pieDiv}>
+    <div className="pie-div" >
       <PieChart
         colors={['wheat', '#ffccff', '#ccffff']}
         series={[

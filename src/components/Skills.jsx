@@ -1,17 +1,11 @@
 import React, { useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
 
+import "../styles/Skills.css";
+
 import Pie from "./Pie";
 
 export default function Skills(props) {
-  const container = {
-    display: 'block',
-    font: `monospace`,
-    position: 'relative',
-    width: '100%',
-    margin: '10px',
-    padding: '10px',
-  };
   const title = {
     display: 'flex',
     font: `monospace`,
@@ -26,31 +20,18 @@ export default function Skills(props) {
     font: `monospace`,
     color: 'white',
     fontSize: '15px',
-    margin: '15px 35px 0 0',
     opacity: '0.8',
     padding: '1rem',
     border: '0.1px solid rgb(100, 100, 100)',
     height: 'auto',
     borderRadius: '10px',
-    // backgroundColor: '#242424',
+    overflow: 'visible', 
+    zIndex: '-1',
   };
-  const pieInfo = {
-    flex: 5,
-    width: '100%',
-    font: `monospace`,
-    color: 'white',
-    fontSize: '15px',
-    margin: '15px 35px 0 0',
-    opacity: '0.8',
-    textAlign: 'left',
-    padding: '1rem',
-    maxHeight: '330px',    
-    borderRadius: '10px',
-  }
   const skillsList = {
     display: 'flex',
     flexWrap: 'wrap',
-    columnGap: '10px',
+    columnGap: '0px',
     padding: '0',
     margin: '0',
   };
@@ -88,7 +69,7 @@ export default function Skills(props) {
 
   return (
     <>
-      <div style={container}>
+      <div className="skill-container">
         <div style={title} onMouseEnter={() => props.setExpanded(false)}>
           <div>Skills</div>
           <div className="close-btn"><CloseIcon /></div>
@@ -97,7 +78,7 @@ export default function Skills(props) {
 
           <Pie setInfo={setInfo}></Pie>
 
-          <div style={pieInfo}>
+          <div className="pie-info">
             <div style={skillsList}>
               {info.map((item, index) => (
                 <div style={skillStyle} key={index}>
