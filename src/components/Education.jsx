@@ -51,22 +51,26 @@ export default function Education(props) {
           <div className="close-btn"><CloseIcon /></div>
         </div>
         <div style={eduData}>
-          <EduBlock content={props.content[0]} setCurrentEdu={setCurrentEdu} index={{index: 0}} />
+          
+          <div className="svg-edu">
+            <EduBlock content={props.content[0]} setCurrentEdu={setCurrentEdu} index={{index: 0}} />
+          </div>
 
-          <div style={{display: "flex"}}>
-            
+          <div className="svg-edu">
             <SvgComponent1 currentEdu={currentEdu} />
-
             <div style={rightAlign}>
               <EduBlock content={props.content[1]} setCurrentEdu={setCurrentEdu} index={{index: 1}} />
             </div>
           </div>
-          <div style={{display: "flex"}}>
-            <EduBlock content={props.content[2]} setCurrentEdu={setCurrentEdu} index={{index: 2}} />
-
-            <SvgComponent2 currentEdu={currentEdu} />
-
+      
+          <div className="svg-edu">
+            {window.innerWidth < 798 && <SvgComponent2 currentEdu={currentEdu} />}
+            <div>
+              <EduBlock content={props.content[2]} setCurrentEdu={setCurrentEdu} index={{index: 2}} />
+            </div>
+            {window.innerWidth >= 798 && <SvgComponent2 currentEdu={currentEdu} />}
           </div>
+
         </div>
       </div>
     </>

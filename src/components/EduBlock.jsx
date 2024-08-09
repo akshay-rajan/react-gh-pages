@@ -8,23 +8,23 @@ export default function EduBlock({ content, setCurrentEdu, index }) {
   const container = window.innerWidth < 798 ? {
     display: 'flex',
     width: 'auto',
+    height: 'auto',
     textAlign: 'left',
     border: '0.1px solid rgb(100, 100, 100)',
     borderRadius: '10px',
     backgroundColor: 'black',
     padding: '1rem',
     margin: '0',
-    height: '100px',
   } : {
     display: 'flex',
     width: '300px',
+    height: '100px',
     textAlign: 'left',
     border: '0.1px solid rgb(100, 100, 100)',
     borderRadius: '10px',
     backgroundColor: 'black',
     padding: '1rem',
     margin: '0',
-    height: '100px',
   };
   const icon = {
     width: '15px',
