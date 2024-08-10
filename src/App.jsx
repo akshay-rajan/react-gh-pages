@@ -17,16 +17,18 @@ function App() {
   
 
   useEffect(() => {
-    window.addEventListener('load', () => {
+    const onPageLoad = () => {
       setLoading(false);
-    });
+    };
+    
+    // If already loaded
+    if (document.readyState === 'complete') {
+      onPageLoad();
+    } else {
+      window.addEventListener('load', onPageLoad, false);
+      return () => window.removeEventListener('load', onPageLoad);
+    }
   }, []);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2500);
-  });
 
   console.log("Width: " + window.innerWidth);
 
