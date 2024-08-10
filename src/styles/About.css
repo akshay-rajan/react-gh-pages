@@ -79,8 +79,8 @@
 .card {
   overflow: hidden;
   position: relative;
-  height: 170px;
-  width: 220px;
+  height: 160px;
+  width: 210px;
   text-align: center;
   margin: 5px;
   padding: 3px;
@@ -140,9 +140,10 @@
 }
 @media (max-width: 798px) {
   .card {
-    height: 120px;
-    width: 150px;
+    height: 180px;
+    width: 250px;
     margin: 2px;
+    margin-left: 20px;
     padding: 3px;
     font-size: 12px;
   }

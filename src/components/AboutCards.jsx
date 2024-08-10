@@ -87,6 +87,10 @@ export default function AboutCards({ isExpanded, setExpanded }) {
       },
     ],
   };
+
+  const container = {
+    overflow: 'hidden',
+  }
   const expanded = {
     display: 'block',
     position: 'relative',
@@ -94,6 +98,7 @@ export default function AboutCards({ isExpanded, setExpanded }) {
     height: '100%',
     width: '100%',
     borderRadius: '20px',
+    overflow: 'hidden',
   };
   const cards = { 
     display: 'grid', 
@@ -122,7 +127,7 @@ export default function AboutCards({ isExpanded, setExpanded }) {
   }, []);
 
   return (
-    <div ref={topElement}>
+    <div ref={topElement} style={container}>
       <div 
         className="expandedDiv"
         style={isExpanded ? (window.innerWidth < 798 ? smallWidth.expanded : expanded) : {display: 'none'}}

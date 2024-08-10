@@ -17,8 +17,9 @@ export default function EduBlock({ content, setCurrentEdu, index }) {
     margin: '0',
   } : {
     display: 'flex',
+    flexWrap: 'wrap',
     width: '300px',
-    height: '100px',
+    minHeight: '100px',
     textAlign: 'left',
     border: '0.1px solid rgb(100, 100, 100)',
     borderRadius: '10px',

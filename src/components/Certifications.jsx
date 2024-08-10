@@ -35,8 +35,8 @@ export default function Certifications(props) {
   } : {
     display: 'flex',
     flexWrap: 'wrap',
-    margin: '10px',
-    padding: '10px',
+    marginTop: '10px',
+    padding: '0',
   };
   const closeButton = {
     position: 'absolute',
@@ -91,7 +91,7 @@ export default function Certifications(props) {
           <div>Certifications</div>
           <div className="close-btn"><CloseIcon /></div>
         </div>
-          <div style={certificates}>
+          <div style={certificates} classname="certificates-div">
             {certifications.content.map((certification, index) => 
               <Certificate key={index} index={index} certification={certification} />
             )}
