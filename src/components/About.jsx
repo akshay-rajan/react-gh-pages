@@ -103,7 +103,7 @@ export default function About() {
           nav.classList.add('scrolled');
           nav.classList.remove('light');
           project.classList.remove('focused');
-          // aboutSection.style.paddingTop = '40px';
+          aboutSection.style.paddingTop = '75px';
         } else if (rect.top >= 100) {
           body.style.backgroundColor = 'transparent';
           nav.classList.remove('scrolled');
@@ -113,14 +113,14 @@ export default function About() {
           // let percentage = (rect.top - 128) / (500 - 0);
           // console.log(percentage < 100 || 100);
           // nav.style.opacity = percentage;
-          
-          // aboutSection.style.paddingTop = '0px';
+
+          aboutSection.style.paddingTop = '0px';
         } else {
           body.style.backgroundColor = 'transparent';
           project.classList.add('focused');
           nav.classList.add('light');
           nav.classList.add('scrolled');
-          // aboutSection.style.paddingTop = '0px';
+          aboutSection.style.paddingTop = '75px';
         }
       } else {
         if (rect.top < 100 && rect.bottom > 100) {

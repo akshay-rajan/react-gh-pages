@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
 import { Home, Info, Engineering, Work, Contacts } from '@mui/icons-material';
@@ -11,12 +11,26 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
 
+  const [aboutOffset, setOffset] = useState(0);
+  const updateOffset = () => {
+    const newOffset = window.scrollY > 100 ? 20 : 0;
+    setOffset(newOffset);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', updateOffset);
+    return () => {
+      window.removeEventListener('scroll', updateOffset);
+    };
+  }, []);
+
   return (
     <div className="myheader" id="nav">
 
       <div className="head-container">
         <nav className="mynavbar" style={window.innerWidth < 798 ? {display: 'none'} : {}}>
           <ul className="navigation-links">
+            {}
             <li>
               <Link 
                 to="" 
@@ -35,7 +49,7 @@ export default function Header() {
                 to="about" 
                 smooth={true} 
                 duration={800} 
-                offset={10}
+                offset={aboutOffset}
                 id="about-button"
               >
                 <Info style={{verticalAlign: 'sub'}} />
