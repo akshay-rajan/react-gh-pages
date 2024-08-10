@@ -3,7 +3,6 @@ import './App.css'
 
 import About from './components/About'
 import Header from './components/Header'
-import Loader from './components/Loader'
 import Projects from './components/Projects'
 import Main from './components/Main'
 import Contact from './components/Contact'
@@ -15,18 +14,11 @@ function App() {
 
   const [loading, setLoading] = useState(true);
   
-
   useEffect(() => {
-    const onPageLoad = () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.style.display = 'none';
       setLoading(false);
-    };
-    
-    // If already loaded
-    if (document.readyState === 'complete') {
-      onPageLoad();
-    } else {
-      window.addEventListener('load', onPageLoad, false);
-      return () => window.removeEventListener('load', onPageLoad);
     }
   }, []);
 
@@ -34,7 +26,7 @@ function App() {
 
   return (
     <>
-      {loading ? <Loader /> : (
+      {!loading && (
         <>
           <BackgroundAnimation />
           <Header />
