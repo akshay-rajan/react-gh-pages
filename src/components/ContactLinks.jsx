@@ -30,7 +30,7 @@ export default function ContactLinks() {
         </div>
         <div className="icon myicon">
           <Tooltip content="Resume" placement="bottom" color="success" style={{color: 'white'}}>
-            <a href="https://akshay-rajan.github.io/static/akshayrajan-resume.pdf">
+            <a href="https://drive.google.com/file/d/1OAndl2Vdgvz096IhcTUArfRPpG7oadOm/view?usp=sharing">
               <img src={ProfileIcon} alt="DP" />
             </a>
           </Tooltip>
