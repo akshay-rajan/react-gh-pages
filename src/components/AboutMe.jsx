@@ -33,11 +33,10 @@ export default function AboutMe({ isExpanded }) {
           About Me
         </div>
         <div>
-        From the precision of numbers to the creativity of code... <br/>
+          <br />
+          I graduated with a degree in Mathematics, from University College Trivandrum. After realizing that programming is where my passion lies, I decided to pursue MCA and I'm currently a final year student at the College of Engineering, Trivandrum. <br/><br/>
 
-        I graduated with a degree in Mathematics, from University College Trivandrum. After realizing that programming is where my passion lies, I decided to pursue MCA and I'm currently a final year student at the College of Engineering, Trivandrum. <br/>
-
-        I have acquired skills in Web Development using Django and I'm currently expanding my knowledge in various areas including Blockchain, Linux, Cybersecurity, AI and Machine Learning. Solving problems on LeetCode is one of my favorite ways to sharpen my analytical and coding skills.
+          I have acquired skills in Web Development using Django and I'm currently expanding my knowledge in various areas including Blockchain, Linux, Cybersecurity, AI and Machine Learning. Solving problems on LeetCode is one of my favorite ways to sharpen my analytical and coding skills.
         </div>
       </div>
     </>
