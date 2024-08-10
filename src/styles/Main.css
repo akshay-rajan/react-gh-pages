@@ -1,12 +1,7 @@
-/* ! MAIN */
 #home {
   margin: 0;
   padding: 0;
 }
-/* .bg {
-  display: block;
-  position: absolute;
-} */
 .content {
   position: relative;
   z-index: 1;
@@ -81,7 +76,6 @@
 }
 
 .name-intro.imgDiv {
-  display: none; /* ! */
   display: block;
   position: fixed;
   width: 100vw;
@@ -107,7 +101,6 @@
   }
   .marquee {
     text-align: top;
-    /* transform: rotate(270deg); */
     flex-direction: column;
     margin: 0px;
     padding: 0px;

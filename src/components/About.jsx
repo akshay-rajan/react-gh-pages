@@ -96,25 +96,44 @@ export default function About() {
       const project = document.querySelector('#projects');
       const rect = aboutSection.getBoundingClientRect();
       
-      if (rect.top < 100 && rect.bottom > 100) {
-        body.style.backgroundColor = 'white';
-        body.style.color = 'black';
-        nav.classList.add('scrolled');
-        nav.classList.remove('light');
-        project.classList.remove('focused');
-        aboutSection.style.paddingTop = '40px';
-      } else if (rect.top >= 100) {
-        body.style.backgroundColor = 'transparent';
-        nav.classList.remove('scrolled');
-        nav.classList.remove('light');
-        project.classList.remove('focused');
-        aboutSection.style.paddingTop = '0px';
+      if (window.innerWidth >= 798) {
+        if (rect.top < 100 && rect.bottom > 100) {
+          body.style.backgroundColor = 'white';
+          body.style.color = 'black';
+          nav.classList.add('scrolled');
+          nav.classList.remove('light');
+          project.classList.remove('focused');
+          // aboutSection.style.paddingTop = '40px';
+        } else if (rect.top >= 100) {
+          body.style.backgroundColor = 'transparent';
+          nav.classList.remove('scrolled');
+          nav.classList.remove('light');
+          project.classList.remove('focused');
+
+          // let percentage = (rect.top - 128) / (500 - 0);
+          // console.log(percentage < 100 || 100);
+          // nav.style.opacity = percentage;
+          
+          // aboutSection.style.paddingTop = '0px';
+        } else {
+          body.style.backgroundColor = 'transparent';
+          project.classList.add('focused');
+          nav.classList.add('light');
+          nav.classList.add('scrolled');
+          // aboutSection.style.paddingTop = '0px';
+        }
       } else {
-        body.style.backgroundColor = 'transparent';
-        project.classList.add('focused');
-        nav.classList.add('light');
-        nav.classList.add('scrolled');
-        aboutSection.style.paddingTop = '0px';
+        if (rect.top < 100 && rect.bottom > 100) {
+          body.style.backgroundColor = 'white';
+          body.style.color = 'black';
+          project.classList.remove('focused');
+        } else if (rect.top >= 100) {
+          body.style.backgroundColor = 'transparent';
+          project.classList.remove('focused');
+        } else {
+          body.style.backgroundColor = 'transparent';
+          project.classList.add('focused');
+        }
       }
     };
 
