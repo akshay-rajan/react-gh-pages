@@ -1,16 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+
+import "../styles/Header.css";
+
 import { Home, Info, Engineering, Work, Contacts } from '@mui/icons-material';
+import Hamburger from './Hamburger';
 
 export default function Header() {
 
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
+  // Handle hamburger menu toggle
   const toggleNavbar = () => {
+    document.body.style.overflow = isOpen ? 'auto' : 'hidden';
     setIsOpen(!isOpen);
   };
 
+  // Change scroll offset for about section based on scroll position
   const [aboutOffset, setOffset] = useState(0);
   const updateOffset = () => {
     const newOffset = window.scrollY > 100 ? 20 : 0;
@@ -24,13 +32,16 @@ export default function Header() {
     };
   }, []);
 
+  const iconStyle = { 
+    verticalAlign: 'sub',
+  };
+
   return (
     <div className="myheader" id="nav">
 
       <div className="head-container">
         <nav className="mynavbar" style={window.innerWidth < 798 ? {display: 'none'} : {}}>
           <ul className="navigation-links">
-            {}
             <li>
               <Link 
                 to="" 
@@ -40,7 +51,7 @@ export default function Header() {
                 id="home-button"
                 onClick={() => scroll.scrollToTop()}
               >
-                <Home style={{verticalAlign: 'sub'}} />
+                <Home style={iconStyle} />
                 <div className="help">Home</div>
               </Link>
             </li>
@@ -52,8 +63,8 @@ export default function Header() {
                 offset={aboutOffset}
                 id="about-button"
               >
-                <Info style={{verticalAlign: 'sub'}} />
-                <div className="help">About Me</div>
+                <Info style={iconStyle} />
+                <div className="help">About</div>
               </Link>
             </li>
             <li>
@@ -64,7 +75,7 @@ export default function Header() {
                 offset={20}
                 id="projects-button"
               >
-                <Engineering style={{verticalAlign: 'sub'}} />
+                <Engineering style={iconStyle} />
                 <div className="help">Projects</div>
               </Link>
             </li>
@@ -76,7 +87,7 @@ export default function Header() {
                 offset={20}
                 id="experience-button"
               >
-                <Work style={{verticalAlign: 'sub'}} />
+                <Work style={iconStyle} />
                 <div className="help">Experience</div>
               </Link>
             </li>
@@ -88,70 +99,92 @@ export default function Header() {
                 offset={20}
                 id="contact-button"
               >
-                <Contacts style={{verticalAlign: 'sub'}} />
-                <div className="help">Contact Me</div>
+                <Contacts style={iconStyle} />
+                <div className="help">Contact</div>
               </Link>
             </li>
           </ul>
         </nav>
 
-        <span className="hamburger-icon" onClick={toggleNavbar}>
-          <i className="fa fa-bars"></i>
+        <span className="hamburger-icon">
+          <Hamburger isOpen={isOpen} toggle={toggleNavbar} />
         </span>
 
-        {/* <div className={`mobile-navbar ${isOpen ? 'open' : ''}`} style={window.innerWidth < 798 && {display: 'block'}}>
-          <span className="closebtn" onClick={toggleNavbar}>&times;</span>
-          <Link 
-            to="" 
-            smooth={true} 
-            duration={800} 
-            offset={-70}
-            id="home-button"
-            onClick={() => { scroll.scrollToTop(); toggleNavbar(); }}
-          >
-            <Home />
-          </Link>
-          <Link 
-            to="about" 
-            smooth={true} 
-            duration={800} 
-            offset={10}
-            id="about-button"
-            onClick={toggleNavbar}
-          >
-            <Info />
-          </Link>
-          <Link 
-            to="projects" 
-            smooth={true} 
-            duration={800} 
-            offset={20}
-            id="projects-button"
-            onClick={toggleNavbar}
-          >
-            <Engineering />
-          </Link>
-          <Link 
-            to="experience" 
-            smooth={true} 
-            duration={800} 
-            offset={20}
-            id="experience-button"
-            onClick={toggleNavbar}
-          >
-            <Work />
-          </Link>
-          <Link 
-            to="contact" 
-            smooth={true} 
-            duration={800} 
-            offset={20}
-            id="contact-button"
-            onClick={toggleNavbar}
-          >
-            <Message />
-          </Link>
-        </div> */}
+        <div className={`mobile-navbar ${isOpen ? 'open' : ''}`}>
+          <ul>
+            <li>
+              <Link 
+                to="" 
+                smooth={true} 
+                duration={800} 
+                offset={-70}
+                id="home-button"
+                onClick={() => { scroll.scrollToTop(); toggleNavbar(); }}
+              >
+                <div className="help">Home</div>
+                <Home style={iconStyle} />
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="about" 
+                smooth={true} 
+                duration={800} 
+                offset={10}
+                id="about-button"
+                onClick={toggleNavbar}
+              >
+                <div className="help">About</div>
+                <Info style={iconStyle} />
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="projects" 
+                smooth={true} 
+                duration={800} 
+                offset={20}
+                id="projects-button"
+                onClick={toggleNavbar}
+              >
+                <div className="help">Projects</div>
+                <Engineering style={iconStyle} />
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="experience" 
+                smooth={true} 
+                duration={800} 
+                offset={20}
+                id="experience-button"
+                onClick={toggleNavbar}
+              >
+                <div className="help">Experience</div>
+                <Work style={iconStyle} />
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="contact" 
+                smooth={true} 
+                duration={800} 
+                offset={20}
+                id="contact-button"
+                onClick={toggleNavbar}
+              >
+                <div className="help">Contact</div>
+                <Contacts style={iconStyle} />
+              </Link>
+            </li>
+            <li className="resume-link-li">
+              <a href="https://drive.google.com/file/d/1OAndl2Vdgvz096IhcTUArfRPpG7oadOm/view?usp=sharing" className="nav-resume-link">
+                <div>Resume</div> <AccountCircleIcon style={iconStyle} />
+              </a>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
   );
